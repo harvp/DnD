@@ -1,9 +1,26 @@
 {
   "dependencies": {
+    "mssql2": {
+      "restored": true,
+      "restoreTime": "2020-10-22T03:12:50.7135504Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2020-10-22T03:12:40.1695559Z"
+    },
     "mssql1": {
       "restored": true,
       "restoreTime": "2020-10-22T02:46:28.4689698Z"
     }
   },
-  "parameters": {}
+  "parameters": {
+    "mssql2.subscriptionId": {
+      "Type": "subscription",
+      "Value": "9562ab21-29de-4171-bcd0-d19343bf3c4e"
+    },
+    "mssql2.resourceGroupName": {
+      "Type": "resourceGroup",
+      "Value": "MyRG"
+    }
+  }
 }

@@ -1,0 +1,40 @@
+
+I'm paraphrasing the instructions you can find here:
+https://docs.microsoft.com/en-us/azure/azure-sql/database/connect-query-dotnet-visual-studio
+
+When connecting to our database, the C# script must include:
+
+using Microsoft.Data.SqlClient;
+
+
+you can then create a SqlConnection by first using string builder to create a string with the required information, and then creating a SqlConnection using that string as a parameter.
+
+
+SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder
+            {
+                DataSource = "hrpsvr.database.windows.net",
+                UserID = "hrpzip",
+                Password = "DBMProject1!",
+                InitialCatalog = "DnD"
+            };
+
+using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+
+                string myQuery = "SELECT Top 1 * FROM Characters";
+
+                SqlCommand command = new SqlCommand(myQuery, connection);
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Message.InnerHtml = (String.Format("{0}", reader[0]));
+			//"Message" is the ID of an html element on the webpage
+
+                    }
+                }
+		
+		connection.Close();
+
+            }
