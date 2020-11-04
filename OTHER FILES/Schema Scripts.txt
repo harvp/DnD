@@ -1,0 +1,44 @@
+CREATE TABLE UserInfo (
+	userID int IDENTITY(1,1),
+	username VARCHAR(20) NOT NULL,
+	password VARCHAR(20) NOT NULL,
+	UNIQUE (username),
+	PRIMARY KEY (userID)
+)
+
+CREATE TABLE Character(
+	charID INT IDENTITY(1,1),
+	name VARCHAR(50) NOT NULL,
+	player VARCHAR(20) NOT NULL,
+	classID INT NOT NULL,
+	subclassID INT,
+	level INT NOT NULL,
+	raceID INT NOT NULL,
+	experience INT NOT NULL, 
+	alignment VARCHAR(2) NOT NULL,
+	hitDie VARCHAR(10) NOT NULL
+	hitPoints INT,
+	
+	PRIMARY Key (charNum)
+	FOREIGN KEY (player) REFERENCES UserInfo(userID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+	FOREIGN KEY (classID) REFERENCES Class(classID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+	FOREIGN KEY (subclassID) REFERENCES SubClass(subclassID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+	FOREIGN KEY (raceID) REFERENCES Race(raceID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+
+)
+
+CREATE TABLE Class(
+	classID INT IDENTITY(1,1),
+	className VARCHAR(30),
+	description VARCHAR(6000),
+	hitDie VARCHAR(10)
+	
+)
