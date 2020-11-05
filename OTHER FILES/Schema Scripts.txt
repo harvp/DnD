@@ -16,7 +16,7 @@ CREATE TABLE Character(
 	raceID INT NOT NULL,
 	experience INT NOT NULL, 
 	alignment VARCHAR(2) NOT NULL,
-	hitDie VARCHAR(10) NOT NULL
+	hitDie VARCHAR(10) NOT NULL,
 	hitPoints INT,
 	
 	PRIMARY Key (charNum)
@@ -37,8 +37,18 @@ CREATE TABLE Character(
 
 CREATE TABLE Class(
 	classID INT IDENTITY(1,1),
-	className VARCHAR(30),
-	description VARCHAR(6000),
-	hitDie VARCHAR(10)
-	
+	className VARCHAR(30) NOT NULL,
+	description VARCHAR(6000) NOT NULL,
+	hitDie VARCHAR(10) NOT NULL,
+	hitPointsOne VARCHAR(30) NOT NULL,
+	hitPointsHigher, VARCHAR(30) NOT NULL,
+	feats, VARCHAR(100) NOT NULL
+)
+
+CREATE TABLE Feats(
+	featID INT IDENTITY(1,1),
+	featName VARCHAR(30) NOT NULL,
+	description VARCHAR(600) NOT NULL,
+
+
 )
