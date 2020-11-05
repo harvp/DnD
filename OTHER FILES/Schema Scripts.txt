@@ -49,6 +49,5 @@ CREATE TABLE Feats(
 	featID INT IDENTITY(1,1),
 	featName VARCHAR(30) NOT NULL,
 	description VARCHAR(600) NOT NULL,
-
-
+	prerequisite VARCHAR(100) NOT NULL
 )
