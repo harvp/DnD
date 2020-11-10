@@ -73,3 +73,10 @@ CREATE TABLE Equipment(
 	equipmentDescription VARCHAR(600) NOT NULL,
 	gold INT NOT NULL
 )
+
+CREATE TABLE Leveling(
+	levelingID INT IDENTITY(1,1),
+	level INT NOT NULL,
+	experiencePoints INT NOT NULL,
+	ProficiencyBonus INT NOT NULL
+)
