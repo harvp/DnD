@@ -66,3 +66,10 @@ CREATE TABLE Skills(
 	skillName VARCHAR(30) NOT NULL,
 	skillDescription VARCHAR(30) NOT NULL
 )
+
+CREATE TABLE Equipment(
+	equipmentID INT IDENTITY(1,1),
+	equipmentName VARCHAR(30) NOT NULL,
+	equipmentDescription VARCHAR(600) NOT NULL,
+	gold INT NOT NULL
+)
