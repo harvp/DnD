@@ -61,5 +61,8 @@ CREATE TABLE Spells(
 )
 
 CREATE TABLE Skills(
-	ability VARCHAR(30) NOT NULL
+	ability VARCHAR(30) NOT NULL,
+	skillID INT IDENTITY(1,1),
+	skillName VARCHAR(30) NOT NULL,
+	skillDescription VARCHAR(30) NOT NULL
 )
