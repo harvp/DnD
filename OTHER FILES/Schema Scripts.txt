@@ -87,3 +87,9 @@ CREATE TABLE Races(
 	abilityScoreIncrease VARCHAR(600) NOT NULL,
 	raceDescription VARCHAR(600) NOT NULL
 )
+
+CREATE TABLE Languages(
+	languageID INT IDENTITY(1,1),
+	languageName VARCHAR(30),
+	languageDescription VARCHAR(600) NOT NULL
+)
