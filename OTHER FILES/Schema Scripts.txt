@@ -59,3 +59,7 @@ CREATE TABLE Spells(
 	spellLevel INT NOT NULL,
 	spellClass VARCHAR(30) NOT NULL
 )
+
+CREATE TABLE Skills(
+	ability VARCHAR(30) NOT NULL
+)
