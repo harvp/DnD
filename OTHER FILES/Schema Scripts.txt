@@ -19,7 +19,8 @@ CREATE TABLE Character(
 	experience INT NOT NULL, 
 	alignment VARCHAR(2) NOT NULL,
 	hitDie VARCHAR(10) NOT NULL,
-	hitPoints INT,
+	hitPointsOne VARCHAR(30) NOT NULL,
+	hitPointsHigher VARCHAR(30) NOT NULL,
 	
 	PRIMARY Key (charNum)
 	FOREIGN KEY (player) REFERENCES UserInfo(userID)
@@ -79,7 +80,7 @@ CREATE TABLE Equipment(
 CREATE TABLE Leveling(
 	levelingID INT IDENTITY(1,1),
 	level INT NOT NULL,
-	experiencePoints INT NOT NULL,
+	experience INT NOT NULL,
 	ProficiencyBonus INT NOT NULL
 )
 
