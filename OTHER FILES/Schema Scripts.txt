@@ -38,16 +38,24 @@ CREATE TABLE Character(
 CREATE TABLE Class(
 	classID INT IDENTITY(1,1),
 	className VARCHAR(30) NOT NULL,
-	description VARCHAR(6000) NOT NULL,
+	classDescription VARCHAR(6000) NOT NULL,
 	hitDie VARCHAR(10) NOT NULL,
 	hitPointsOne VARCHAR(30) NOT NULL,
-	hitPointsHigher, VARCHAR(30) NOT NULL,
-	feats, VARCHAR(100) NOT NULL
+	hitPointsHigher VARCHAR(30) NOT NULL,
+	feats VARCHAR(100) NOT NULL
 )
 
 CREATE TABLE Feats(
 	featID INT IDENTITY(1,1),
 	featName VARCHAR(30) NOT NULL,
-	description VARCHAR(600) NOT NULL,
+	featsDescription VARCHAR(600) NOT NULL,
 	prerequisite VARCHAR(100) NOT NULL
+)
+
+CREATE TABLE Spells(
+	spellID INT IDENTITY(1,1),
+	spellName VARCHAR(30) NOT NULL,
+	spellsDesription VARCHAR(600) NOT NULL,
+	spellLevel INT NOT NULL,
+	spellClass VARCHAR(30) NOT NULL
 )
