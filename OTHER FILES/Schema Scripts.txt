@@ -1,7 +1,7 @@
 CREATE DATABASE charaterCreator;
 
 CREATE TABLE UserInfo (
-	userID int IDENTITY(1,1) AUTO_INCREMENT,
+	userID int IDENTITY(1,1),
 	username VARCHAR(20) NOT NULL,
 	password VARCHAR(20) NOT NULL,
 	UNIQUE (username),
@@ -9,7 +9,7 @@ CREATE TABLE UserInfo (
 )
 
 CREATE TABLE Character(
-	charID INT IDENTITY(1,1) AUTO_INCREMENT,
+	charID INT IDENTITY(1,1),
 	name VARCHAR(50) NOT NULL,
 	player VARCHAR(20) NOT NULL,
 	classID INT NOT NULL,
@@ -108,7 +108,7 @@ INSERT INTO Feats(prerequisite)
 VALUES('-','-','-','Halfling','-','-','Dex: 13+','Dragonborn','Dragonborn','Elf','-','-','-','Dwarf','Must have a spellcaster class','Elf/Half-Elf','Gnome','Elf','Tiefling','STR: 13+','-',);
 
 CREATE TABLE Spells(
-	spellID INT IDENTITY(1,1) AUTO_INCREMENT,
+	spellID INT IDENTITY(1,1) 
 	spellName VARCHAR(30) NOT NULL,
 	spellsDesription VARCHAR(600) NOT NULL,
 	spellLevel INT NOT NULL,
@@ -117,34 +117,34 @@ CREATE TABLE Spells(
 
 CREATE TABLE Skills(
 	ability VARCHAR(30) NOT NULL,
-	skillID INT IDENTITY(1,1) AUTO_INCREMENT,
+	skillID INT IDENTITY(1,1) 
 	skillName VARCHAR(30) NOT NULL,
 	skillDescription VARCHAR(30) NOT NULL
 )
 
 CREATE TABLE Equipment(
-	equipmentID INT IDENTITY(1,1) AUTO_INCREMENT,
+	equipmentID INT IDENTITY(1,1) 
 	equipmentName VARCHAR(30) NOT NULL,
 	equipmentDescription VARCHAR(600) NOT NULL,
 	gold INT NOT NULL
 )
 
 CREATE TABLE Leveling(
-	levelingID INT IDENTITY(1,1) AUTO_INCREMENT,
+	levelingID INT IDENTITY(1,1) 
 	level INT NOT NULL,
 	experience INT NOT NULL,
 	ProficiencyBonus INT NOT NULL
 )
 
 CREATE TABLE Races(
-	raceID INT IDENTITY(1,1) AUTO_INCREMENT,
+	raceID INT IDENTITY(1,1) 
 	raceName VARCHAR(30) NOT NULL,
 	abilityScoreIncrease VARCHAR(600) NOT NULL,
 	raceDescription VARCHAR(600) NOT NULL
 )
 
 CREATE TABLE Languages(
-	languageID INT IDENTITY(1,1) AUTO_INCREMENT,
+	languageID INT IDENTITY(1,1) 
 	languageName VARCHAR(30),
 	languageDescription VARCHAR(600) NOT NULL
 )
