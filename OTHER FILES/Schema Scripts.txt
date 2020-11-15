@@ -79,7 +79,7 @@ CREATE TABLE Feats(
 )
 
 INSERT INTO Feats(featName)
-VALUES('Actor','Alert','Athlete','Bountiful Luck','Charger','Crossbow Expert','Defensive Duelist','Dragon Fear','Dragon Hide','Drow High Magic','Dual Wieldwe','Dungeon Delver','Durable','Dwarf Fortitude','Elemental Adept','Elven Accuracy','Fade Away','Fey Transportation','Flames of Phlegethos','Grappler','Great Weapon Master',);
+VALUES('Actor','Alert','Athlete','Bountiful Luck','Charger','Crossbow Expert','Defensive Duelist','Dragon Fear','Dragon Hide','Drow High Magic','Dual Wieldwe','Dungeon Delver','Durable','Dwarf Fortitude','Elemental Adept','Elven Accuracy','Fade Away','Fey Transportation','Flames of Phlegethos','Grappler','Great Weapon Master','Healer','Heavily Armored','Heavy Armor Master','Infernal Constitution','Inspiring Leader','Keen Mind','Lightly Armored','Linguist','Lucky','Mage Slayer','Magic Initiate','Martial Adept',);
 INSERT INTO Feats(featsDescription)
 VALUES('+1 in Cha., advantage on Deception and Performance checks, mimic the speech of a person or the sounds made by a creature.',
 '+5 to initiative, you can't be surprised, and creatures you don't see don't gain advantage on attack roll against you.',
@@ -102,10 +102,22 @@ VALUES('+1 in Cha., advantage on Deception and Performance checks, mimic the spe
 '+1 in Int. or Cha., reroll any 1 on fire spell damage, and cause flames to wreathe you if you cast a fire spell.',
 'You have advantage on attack rolls when grappling, and can try to restrained a creature grappled by you.',
 'Extra attack after a melee critical hit and you can choose to take -5 to attack roll to add +10 to damage with an heavy weapon.',
-'',
+'You can stabilize a creature and restore it to 1 hp, or restore [1d6+4+its number of Hit Dice] hp to it.',
+'+1 in Str. and you gain proficiency with heavy armor.',
+'+1 in Str. and bludgeoning, piercing, and slashing damage are reduced by 3 if you are wearing an heavy armor.',
+'+1 in Con., resistance to cold and poison damage, and you have advantage on saving throws against being poisoned.',
+'Up to 6 creatures within 30 ft of you can gain temporary hp equal to your levei + your Cha. modifier.',
+'+1 in Int., you know which way is north, when is the next sunrise/sunset, and recall any events within the past month.',
+'+1 in Str. or Dex. and you gain profociency with light armor.',
+'+1 in Int., you learn three languages, and you can ably create ciphers.',
+'You can reroll one d20 or force to reroll an attack roll against you (3/long rest).',
+'You can use a reaction to make a melee attack against a spellcaster and advantage on saving throws against spell within 5 ft.',
+'You learn two cantrips and one 1st-level spell from one class.',
+'You learn two maneuvers from Battle Master archetype and gain one superiority die (d6).',
+''.
 );
 INSERT INTO Feats(prerequisite)
-VALUES('-','-','-','Halfling','-','-','Dex: 13+','Dragonborn','Dragonborn','Elf','-','-','-','Dwarf','Must have a spellcaster class','Elf/Half-Elf','Gnome','Elf','Tiefling','STR: 13+','-',);
+VALUES('-','-','-','Halfling','-','-','DEX: 13+','Dragonborn','Dragonborn','Elf','-','-','-','Dwarf','Must have a spellcaster class','Elf/Half-Elf','Gnome','Elf','Tiefling','STR: 13+','-','-','Medium Armor Proficiency','Heavy Armor Proficiency','Tiefling','CHAR:13+','-','-','-','-','-','-','-',);
 
 CREATE TABLE Spells(
 	spellID INT IDENTITY(1,1) AUTO_INCREMENT,
