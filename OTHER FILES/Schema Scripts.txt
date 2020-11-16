@@ -1,7 +1,7 @@
 CREATE DATABASE charaterCreator;
 
 CREATE TABLE UserInfo (
-	userID int IDENTITY(1,1) AUTO_INCREMENT,
+	userID int IDENTITY(1,1),
 	username VARCHAR(20) NOT NULL,
 	password VARCHAR(20) NOT NULL,
 	UNIQUE (username),
@@ -9,7 +9,7 @@ CREATE TABLE UserInfo (
 )
 
 CREATE TABLE Character(
-	charID INT IDENTITY(1,1) AUTO_INCREMENT,
+	charID INT IDENTITY(1,1),
 	name VARCHAR(50) NOT NULL,
 	player VARCHAR(20) NOT NULL,
 	classID INT NOT NULL,
@@ -22,19 +22,19 @@ CREATE TABLE Character(
 	hitPointsOne VARCHAR(30) NOT NULL,
 	hitPointsHigher VARCHAR(30) NOT NULL,
 	
-	PRIMARY Key (charNum)
+	PRIMARY Key (charNum),
 	FOREIGN KEY (player) REFERENCES UserInfo(userID)
 		ON DELETE CASCADE
-		ON UPDATE CASCADE
+		ON UPDATE CASCADE,
 	FOREIGN KEY (classID) REFERENCES Class(classID)
-		ON DELETE CASCADE
-		ON UPDATE CASCADE
+		ON DELETE SET NULL
+		ON UPDATE SET NULL,
 	FOREIGN KEY (subclassID) REFERENCES SubClass(subclassID)
-		ON DELETE CASCADE
-		ON UPDATE CASCADE
-	FOREIGN KEY (raceID) REFERENCES Race(raceID)
-		ON DELETE CASCADE
-		ON UPDATE CASCADE
+		ON DELETE SET NULL
+		ON UPDATE SET NULL,
+	FOREIGN KEY (raceID) REFERENCES Races(raceID)
+		ON DELETE SET NULL
+		ON UPDATE SET NULL
 
 )
 
@@ -78,20 +78,22 @@ CREATE TABLE Feats(
 	prerequisite VARCHAR(100) NOT NULL
 )
 
+begin tran
+select * from Feats;
 INSERT INTO Feats(featName)
-VALUES('Actor','Alert','Athlete','Bountiful Luck','Charger','Crossbow Expert','Defensive Duelist','Dragon Fear','Dragon Hide','Drow High Magic','Dual Wieldwe','Dungeon Delver','Durable','Dwarf Fortitude','Elemental Adept','Elven Accuracy','Fade Away','Fey Transportation','Flames of Phlegethos','Grappler','Great Weapon Master','Healer','Heavily Armored','Heavy Armor Master','Infernal Constitution','Inspiring Leader','Keen Mind','Lightly Armored','Linguist','Lucky','Mage Slayer','Magic Initiate','Martial Adept',);
+VALUES('Actor','Alert','Athlete','Bountiful Luck','Charger','Crossbow Expert','Defensive Duelist','Dragon Fear','Dragon Hide','Drow High Magic','Dual Wieldwe','Dungeon Delver','Durable','Dwarf Fortitude','Elemental Adept','Elven Accuracy','Fade Away','Fey Transportation','Flames of Phlegethos','Grappler','Great Weapon Master','Healer','Heavily Armored','Heavy Armor Master','Infernal Constitution','Inspiring Leader','Keen Mind','Lightly Armored','Linguist','Lucky','Mage Slayer','Magic Initiate','Martial Adept');
 INSERT INTO Feats(featsDescription)
 VALUES('+1 in Cha., advantage on Deception and Performance checks, mimic the speech of a person or the sounds made by a creature.',
-'+5 to initiative, you can't be surprised, and creatures you don't see don't gain advantage on attack roll against you.',
+'+5 to initiative, you can''t be surprised, and creatures you don''t see don''t gain advantage on attack roll against you.',
 '+1 in Str. or Dex., you stand up and climb more quickly, and you can jump with only a 5-ft run.',
 'You can let an ally within 30 ft of you to reroll a 1 on a d20.',
 'As part of the Dash action you can make a melee attack with a +5 bonus if you move at least 10 ft before.',
-'You ignore the loading property of crossbows and don't have disadvantage for being in contact with a creature when you shoot.',
+'You ignore the loading property of crossbows and don''t have disadvantage for being in contact with a creature when you shoot.',
 'You can add you proficiency bonus to your AC if you are wielding a finesse weapon.',
 '+1 in Str., Con., or Cha. and your Breath Weapon can frighten instead of inflicting damages.',
 '+1 in Str., Con., or Cha., your AC becomes 13+Dex. modifier and your retractable claws deal 1d4+Str. modifier slashing damage.',
 'You can cast the detect magic spell (at will) and the levitate and dispel magic spells (1/long rest).',
-'+1 to CA if you're wielding a melee weapon in each hand, two-weapon fighting with non-light weapon, draw two weapons.',
+'+1 to CA if you''re wielding a melee weapon in each hand, two-weapon fighting with non-light weapon, draw two weapons.',
 'Advantage to Perception and Investigation checks, to saving throws vs traps, and search for traps at normal pace.',
 '+1 in Con. and for each Hit Dice you regain a minimum of hit points equals to 2 x your Constitution modifier.',
 '+1 in Con., and you can spend one Hit Die to heal yourself taking the Dodge action.',
@@ -114,13 +116,14 @@ VALUES('+1 in Cha., advantage on Deception and Performance checks, mimic the spe
 'You can use a reaction to make a melee attack against a spellcaster and advantage on saving throws against spell within 5 ft.',
 'You learn two cantrips and one 1st-level spell from one class.',
 'You learn two maneuvers from Battle Master archetype and gain one superiority die (d6).',
-''.
-);
+'');
 INSERT INTO Feats(prerequisite)
-VALUES('-','-','-','Halfling','-','-','DEX: 13+','Dragonborn','Dragonborn','Elf','-','-','-','Dwarf','Must have a spellcaster class','Elf/Half-Elf','Gnome','Elf','Tiefling','STR: 13+','-','-','Medium Armor Proficiency','Heavy Armor Proficiency','Tiefling','CHAR:13+','-','-','-','-','-','-','-',);
+VALUES('-','-','-','Halfling','-','-','DEX: 13+','Dragonborn','Dragonborn','Elf','-','-','-','Dwarf','Must have a spellcaster class','Elf/Half-Elf','Gnome','Elf','Tiefling','STR: 13+','-','-','Medium Armor Proficiency','Heavy Armor Proficiency','Tiefling','CHAR:13+','-','-','-','-','-','-','-');
+select * from Feats;
+rollback tran
 
 CREATE TABLE Spells(
-	spellID INT IDENTITY(1,1) AUTO_INCREMENT,
+	spellID INT IDENTITY(1,1) 
 	spellName VARCHAR(30) NOT NULL,
 	spellsDesription VARCHAR(600) NOT NULL,
 	spellLevel INT NOT NULL,
@@ -129,35 +132,226 @@ CREATE TABLE Spells(
 
 CREATE TABLE Skills(
 	ability VARCHAR(30) NOT NULL,
-	skillID INT IDENTITY(1,1) AUTO_INCREMENT,
+	skillID INT IDENTITY(1,1) 
 	skillName VARCHAR(30) NOT NULL,
 	skillDescription VARCHAR(30) NOT NULL
 )
 
 CREATE TABLE Equipment(
-	equipmentID INT IDENTITY(1,1) AUTO_INCREMENT,
+	equipmentID INT IDENTITY(1,1) 
 	equipmentName VARCHAR(30) NOT NULL,
 	equipmentDescription VARCHAR(600) NOT NULL,
 	gold INT NOT NULL
 )
 
 CREATE TABLE Leveling(
-	levelingID INT IDENTITY(1,1) AUTO_INCREMENT,
+	levelingID INT IDENTITY(1,1) 
 	level INT NOT NULL,
 	experience INT NOT NULL,
 	ProficiencyBonus INT NOT NULL
 )
 
 CREATE TABLE Races(
-	raceID INT IDENTITY(1,1) AUTO_INCREMENT,
+	raceID INT IDENTITY(1,1) 
 	raceName VARCHAR(30) NOT NULL,
 	abilityScoreIncrease VARCHAR(600) NOT NULL,
 	raceDescription VARCHAR(600) NOT NULL
 )
 
 CREATE TABLE Languages(
-	languageID INT IDENTITY(1,1) AUTO_INCREMENT,
+	languageID INT IDENTITY(1,1) 
 	languageName VARCHAR(30),
 	languageDescription VARCHAR(600) NOT NULL
 )
 
+
+CREATE TABLE SubClass(
+	subClassID INT IDENTITY(1,1),
+	subClassName VARCHAR(50), 
+	classID INT NOT NULL,
+	description VARCHAR(6000),
+	PRIMARY KEY (subClassID),
+	FOREIGN KEY (classID)
+	REFERENCES Class(classID)
+			ON DELETE CASCADE
+			ON UPDATE CASCADE
+		
+)
+
+
+CREATE TABLE Weapons(
+	weaponID INT IDENTITY(1,1), 
+	weaponName VARCHAR(30) NOT NULL,
+	weaponDice VARCHAR(10) NOT NULL,
+	range INT,
+	requiredProficiency INT,
+	gold INT NOT NULL,
+	PRIMARY KEY (weaponID),
+	
+)
+
+CREATE TABLE Armor(
+	armorID INT IDENTITY(1,1), 
+	armorName VARCHAR(30) NOT NULL,
+	armorClass INT,
+	maxDexBonus INT,
+	requiredProficiency INT,
+	gold INT NOT NULL
+	PRIMARY KEY (armorID)
+)
+
+CREATE TABLE Proficiencies(
+	proficiencyID INT IDENTITY(1,1),
+	proficiencyName VARCHAR(30) NOT NULL,
+	PRIMARY KEY (proficiencyID)
+)
+
+CREATE TABLE ClassFeatures(
+	classFeatureID INT IDENTITY(1,1),
+	classFeatureName VARCHAR(50) NOT NULL,
+	classFeatureDescription VARCHAR(6000),
+	classID INT NOT NULL,
+	subClassID INT,
+	leavelEarned INT
+	PRIMARY KEY (classFeatureID),
+	FOREIGN KEY (classID) REFERENCES
+		Class(classID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+	FOREIGN KEY (subClassID) REFERENCES
+		SubClass(subClassID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+)
+
+CREATE TABLE Ability(
+	abilityID INT IDENTITY(1,1),
+	abilityName VARCHAR(30) NOT NULL,
+	PRIMARY KEY (abilityID)
+)
+
+
+
+CREATE TABLE ClassFeaturesKnown(
+	charID INT,
+	classFeaturesID INT,
+	PRIMARY KEY (charID, classFeaturesID),
+	FOREIGN KEY (charID) REFERENCES
+		Character (charID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+	FOREIGN KEY (classFeaturesID) REFERENCES
+		ClassFeatures (classFeatureID)
+
+)
+
+
+CREATE TABLE SkillProficiency(
+	charID INT,
+	skillID INT,
+	proficient INT,
+	PRIMARY KEY (charID, skillID),
+	FOREIGN KEY (charID) REFERENCES
+		Character (charID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+	FOREIGN KEY (skillID) REFERENCES
+		Skills (skillID),
+    CHECK (proficient >= 0),
+    CHECK (proficient <=1)
+
+)
+
+CREATE TABLE AbilityScores(
+	charID INT,
+	abilityNum INT,
+	score INT,
+	PRIMARY KEY (charID, abilityNum),
+	FOREIGN KEY (charID) REFERENCES
+		Character (charID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+	FOREIGN KEY (abilityNum) REFERENCES
+		Ability (abilityID)
+)
+
+CREATE TABLE SpellsKnown(
+	charID INT,
+	spellID INT,
+	PRIMARY KEY (charID, spellID),
+	FOREIGN KEY (charID) REFERENCES
+		Character (charID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+	FOREIGN KEY (spellID) REFERENCES
+		Spells (spellID)
+)
+
+CREATE TABLE FeatsKnown(
+	charID INT,
+	featID INT,
+	PRIMARY KEY (charID, featID),
+	FOREIGN KEY (charID) REFERENCES
+		Character (charID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+	FOREIGN KEY (featID) REFERENCES
+		Feats (featID)
+)
+
+CREATE TABLE Money(
+	charID INT,
+	platinum INT DEFAULT 0,
+	gold INT DEFAULT 0,
+	silver INT DEFAULT 0,
+	electrum INT DEFAULT 0,
+	copper INT DEFAULT 0,
+	PRIMARY KEY (charID),
+	FOREIGN KEY (charID) REFERENCES
+		Character (charID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+)
+
+CREATE TABLE CharacterSpellSlots(
+	charID INT,
+	classID INT,
+	cantrip INT,
+	level1 INT,
+	level2 INT,
+	level3 INT,
+	level4 INT,
+	level5 INT,
+	level6 INT,
+	level7 INT,
+	level8 INT,
+	level9 INT,
+	PRIMARY KEY (charID, classID),
+	FOREIGN KEY (charID) REFERENCES
+		Character (charID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+	FOREIGN KEY (classID) REFERENCES
+		Class (classID)
+)
+
+CREATE TABLE ClassSpellSlots(
+	classID INT,
+	charLevel INT,
+	cantrip INT,
+	level1 INT,
+	level2 INT,
+	level3 INT,
+	level4 INT,
+	level5 INT,
+	level6 INT,
+	level7 INT,
+	level8 INT,
+	level9 INT,
+	PRIMARY KEY (classID, charLevel),
+	FOREIGN KEY (classID) REFERENCES
+		Class (classID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+
+)
