@@ -65,7 +65,7 @@ CREATE TABLE Spells(
 CREATE TABLE Skills(
 	skillID INT IDENTITY(1,1) 
 	skillName VARCHAR(30) NOT NULL,
-	skillDescription VARCHAR(6000) NOT NULL,
+	skillDescription VARCHAR(MAX) NOT NULL,
 	ability INT,
 	PRIMARY KEY (skillID)
 )
@@ -314,4 +314,14 @@ CREATE TABLE SavingThrows(
     CHECK (wisdom <=1),
 	CHECK (charisma >= 0),
     CHECK (charisma <=1)
+)
+
+create table racialAbilities
+(
+    raceID int,
+    abilityName varchar(40),
+    abilityDescription varchar(max),
+    primary key (raceID, abilityName),
+    foreign key (raceID) REFERENCES
+    races (raceID)
 )

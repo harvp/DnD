@@ -34,18 +34,18 @@ VALUES
 INSERT INTO Class 
 VALUES
 
-(	'Barbarian', 	'For some, their rage springs from a communion with fierce animal spirits. Others draw from a roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that fuels not just a battle frenzy but also uncanny reflexes, resilience, and feats of strength.', 	'D12', 	'12 + con' 	),
-(	'Bard', 	'Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds.', 	'D8',	'8 + con' 	),
-(	'Cleric', 	'Clerics are intermediaries between the mortal world and the distant planes of the gods. As varied as the gods they serve, clerics strive to embody the handiwork of their deities. No ordinary priest, a cleric is imbued with divine magic.', 	'D8', 	'8 + con' 	),
-(	'Druid', 	'Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are an embodiment of nature’s resilience, cunning, and fury. They claim no mastery over nature. Instead, they see themselves as extensions of nature’s indomitable will.', 	'D8', 	'8 + con' 	),
-(	'Fighter', 	'Questing knights, conquering overlords, royal champions, elite foot soldiers, hardened mercenaries, and bandit kings—as fighters, they all share an unparalleled mastery with weapons and armor, and a thorough knowledge of the skills of combat. And they are well acquainted with death, both meting it out and staring it defiantly in the face.', 	'D10', 	'10 + con' 	),
-(	'Monk', 	'Whatever their discipline, monks are united in their ability to magically harness the energy that flows in their bodies. Whether channeled as a striking display of combat prowess or a subtler focus of defensive ability and speed, this energy infuses all that a monk does.', 	'D8', 	'8 + con' 	),
-(	'Paladin', 	'Whatever their origin and their mission, paladins are united by their oaths to stand against the forces of evil. Whether sworn before a god’s altar and the witness of a priest, in a sacred glade before nature spirits and fey beings, or in a moment of desperation and grief with the dead as the only witness, a paladin’s oath is a powerful bond. It is a source of power that turns a devout warrior into a blessed champion.', 	'D10', 	'10 + con' 	),
-(	'Ranger', 	'Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch.', 	'D10', 	'10 + con' 	),
-(	'Rogue', 	'Rogues rely on skill, stealth, and their foes’ vulnerabilities to get the upper hand in any situation. They have a knack for finding the solution to just about any problem, demonstrating a resourcefulness and versatility that is the cornerstone of any successful adventuring party.', 	'D8', 	'8 + con' 	),
-(	'Sorcerer', 	'Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence, or exposure to unknown cosmic forces. One can’t study sorcery as one learns a language, any more than one can learn to live a legendary life. No one chooses sorcery; the power chooses the sorcerer.', 	'D6', 	'6 + con' 	),
-(	'Warlock', 	'Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse. Through pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both subtle and spectacular. Drawing on the ancient knowledge of beings such as fey nobles, demons, devils, hags, and alien entities of the Far Realm, warlocks piece together arcane secrets to bolster their own power.', 	'D8', 	'8 + con' 	),
-(	'Wizard',	'Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, and brute-force mind control. Their magic conjures monsters from other planes of existence, glimpses the future, or turns slain foes into zombies. Their mightiest spells change one substance into another, call meteors down from the sky, or open portals to other worlds.',	'D6',	'6 + con'	)
+('Barbarian', 	'For some, their rage springs from a communion with fierce animal spirits. Others draw from a roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that fuels not just a battle frenzy but also uncanny reflexes, resilience, and feats of strength.', 	'D12', 	'12 + con', ' ' 	),
+('Bard', 	'Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds.', 	'D8',	'8 + con' , ' '	),
+('Cleric', 	'Clerics are intermediaries between the mortal world and the distant planes of the gods. As varied as the gods they serve, clerics strive to embody the handiwork of their deities. No ordinary priest, a cleric is imbued with divine magic.', 	'D8', 	'8 + con' , ' '	),
+('Druid', 	'Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are an embodiment of nature’s resilience, cunning, and fury. They claim no mastery over nature. Instead, they see themselves as extensions of nature’s indomitable will.', 	'D8', 	'8 + con' , ' '	),
+('Fighter', 	'Questing knights, conquering overlords, royal champions, elite foot soldiers, hardened mercenaries, and bandit kings—as fighters, they all share an unparalleled mastery with weapons and armor, and a thorough knowledge of the skills of combat. And they are well acquainted with death, both meting it out and staring it defiantly in the face.', 	'D10', 	'10 + con' , ' '	),
+('Monk', 	'Whatever their discipline, monks are united in their ability to magically harness the energy that flows in their bodies. Whether channeled as a striking display of combat prowess or a subtler focus of defensive ability and speed, this energy infuses all that a monk does.', 	'D8', 	'8 + con' , ' '	),
+('Paladin', 	'Whatever their origin and their mission, paladins are united by their oaths to stand against the forces of evil. Whether sworn before a god’s altar and the witness of a priest, in a sacred glade before nature spirits and fey beings, or in a moment of desperation and grief with the dead as the only witness, a paladin’s oath is a powerful bond. It is a source of power that turns a devout warrior into a blessed champion.', 	'D10', 	'10 + con' , ' '	),
+('Ranger', 	'Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch.', 	'D10', 	'10 + con' , ' '	),
+('Rogue', 	'Rogues rely on skill, stealth, and their foes’ vulnerabilities to get the upper hand in any situation. They have a knack for finding the solution to just about any problem, demonstrating a resourcefulness and versatility that is the cornerstone of any successful adventuring party.', 	'D8', 	'8 + con' , ' '	),
+('Sorcerer', 	'Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence, or exposure to unknown cosmic forces. One can’t study sorcery as one learns a language, any more than one can learn to live a legendary life. No one chooses sorcery; the power chooses the sorcerer.', 	'D6', 	'6 + con' , ' '	),
+('Warlock', 	'Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse. Through pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both subtle and spectacular. Drawing on the ancient knowledge of beings such as fey nobles, demons, devils, hags, and alien entities of the Far Realm, warlocks piece together arcane secrets to bolster their own power.', 	'D8', 	'8 + con' , ' '	),
+('Wizard',	'Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, and brute-force mind control. Their magic conjures monsters from other planes of existence, glimpses the future, or turns slain foes into zombies. Their mightiest spells change one substance into another, call meteors down from the sky, or open portals to other worlds.',	'D6',	'6 + con', ' '	)
 
 
 
@@ -152,3 +152,139 @@ INSERT INTO Proficiencies VALUES
 (	'Weaver''s Tools'	),
 (	'Whip'	),
 (	'Woodcarver''s Tools'	);
+
+
+
+INSERT INTO Races (raceName, raceDescription, ability1, ability2, ability1Increase, ability2Increase)  --str1002, dex1003, con1004  int1005, wis1006, cha1007
+VALUES
+('Eladrin', 'Creatures of magic with strong ties to nature, eladrin live in the twilight realm of the Feywild. Their cities sometimes cross over to the Material Plane, appearing briefly in mountain valleys or deep forest glades before fading back into the Feywild.', 1003, 2,  1005, 1),
+('High Elf', 'As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many of the worlds of D&D, there are two kinds of high elves. One type (which includes the gray elves and valley elves of Greyhawk, the Silvanesti of Dragonlance, and the sun elves of the Forgotten Realms) is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type (including the high elves of Greyhawk, the Qualinesti of Dragonlance, and the moon elves of the Forgotten Realms) are more common and more friendly, and often encountered among humans and other races.
+
+The sun elves of Faerûn (also called gold elves or sunrise elves) have bronze skin and hair of copper, black, or golden blond. Their eyes are golden, silver, or black. Moon elves (also called silver elves or gray elves) are much paler, with alabaster skin sometimes tinged with blue. They often have hair of silver-white, black, or blue, but various shades of blond, brown, and red are not uncommon. Their eyes are blue or green and flecked with gold.', 1005, 1003, 1, 2 ),
+('Wood Elf', 'As a wood elf, you have keen senses and intuition, and your fleet feet carry you quickly and stealthily through your native forests. This category includes the wild elves (grugach) of Greyhawk and the Kagonesti of Dragonlance, as well as the races called wood elves in Greyhawk and the Forgotten Realms. In Faerûn, wood elves (also called wild elves, green elves, or forest elves) are reclusive and distrusting of non-elves.
+
+Wood elves’ skin tends to be copperish in hue, sometimes with traces of green. Their hair tends toward browns and blacks, but it is occasionally blond or copper-colored. Their eyes are green, brown, or hazel.', 1006, 1003, 1, 2 ),
+
+('Dragonborn', 'Born of dragons, as their name proclaims, the dragonborn walk proudly through a world that greets them with fearful incomprehension. Shaped by draconic gods or the dragons themselves, dragonborn originally hatched from dragon eggs as a unique race, combining the best attributes of dragons and humanoids. Some dragonborn are faithful servants to true dragons, others form the ranks of soldiers in great wars, and still others find themselves adrift, with no clear calling in life.', 1002, 1007, 2, 1 ),
+('Hill Dwarf', 'As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience. The gold dwarves of Faerûn in their mighty southern kingdom are hill dwarves, as are the exiled Neidar and the debased Klar of Krynn in the Dragonlance setting.', 1004, 1006, 2, 1),
+('Mountain Dwarf', 'As a mountain dwarf, you’re strong and hardy, accustomed to a difficult life in rugged terrain. You’re probably on the tall side (for a dwarf), and tend toward lighter coloration. The shield dwarves of northern Faerûn, as well as the ruling Hylar clan and the noble Daewar clan of Dragonlance, are mountain dwarves.', 1004, 1002, 2, 2),
+('Forest Gnome', 'Forest gnomes are the smallest of the gnomes, averaging only 2 to 2 1/2 feet tall. Even the tallest forest gnome is less than 3 feet. They usually weigh around 25 to 30 pounds. Unlike other gnomes, they wear their hair and beards long, often almost to their feet when unbound. The males often trim their beards to a fine point or curl them into hornlike spikes extending to either side of their faces. Their skin is the color of bark, and their eyes are usually brown or blue. Their hair is brown or black, becoming gray or white with age.', 1005, 1003 ,2, 1),
+('Deep Gnome', 'Forest gnomes and rock gnomes are the gnomes most commonly encountered in the lands of the surface world. There is another subrace of gnomes rarely seen by any surface-dweller: deep gnomes, also known as svirfneblin. Guarded, and suspicious of outsiders, svirfneblin are cunning and taciturn, but can be just as kind-hearted, loyal, and compassionate as their surface cousins.' , 1005, 1004 ,2, 1 ),
+('Rock Gnome', 'As a Rock Gnome, you have a natural inventiveness and hardiness beyond that of other Gnomes.', 1005, 1003 , 2, 1),
+('Half-Elf', 'Walking in two worlds but truly belonging to neither, half-elves combine what some say are the best qualities of their elf and human parents: human curiosity, inventiveness, and ambition tempered by the refined senses, love of nature, and artistic tastes of the elves. Some half-elves live among humans, set apart by their emotional and physical differences, watching friends and loved ones age while time barely touches them. Others live with the elves, growing restless as they reach adulthood in the timeless elven realms, while their peers continue to live as children. Many half-elves, unable to fit into either society, choose lives of solitary wandering or join with other misfits and outcasts in the adventuring life.', 1007, NULL, 2, NULL),
+('Lightfoot Halfling', 'As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You’re inclined to be affable and get along well with others. In the Forgotten Realms, lightfoot halflings have spread the farthest and thus are the most common variety.
+
+Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life. In the world of Greyhawk, these halflings are called hairfeet or tallfellows.', 1003 , 1007, 2 , 1),
+('Stout Halfling', 'As a stout halfling, you’re hardier than average and have some resistance to poison. Some say that stouts have dwarven blood. In the Forgotten Realms, these halflings are called stronghearts, and they’re most common in the south.', 1004, 1003 , 1, 2 ),
+('Half-Orc', 'Whether united under the leadership of a mighty warlock or having fought to a standstill after years of conflict, orc and human tribes sometimes form alliances, joining forces into a larger horde to the terror of civilized lands nearby. When these alliances are sealed by marriages, half-orcs are born. Some half-orcs rise to become proud chiefs of orc tribes, their human blood giving them an edge over their full-blooded orc rivals. Some venture into the world to prove their worth among humans and other more civilized races. Many of these become adventurers, achieving greatness for their mighty deeds and notoriety for their barbaric customs and savage fury.', 1002, 1004, 2, 1),
+('Human', 'In the reckonings of most worlds, humans are the youngest of the common races, late to arrive on the world scene and short-lived in comparison to dwarves, elves, and dragons. Perhaps it is because of their shorter lives that they strive to achieve as much as they can in the years they are given. Or maybe they feel they have something to prove to the elder races, and that’s why they build their mighty empires on the foundation of conquest and trade. Whatever drives them, humans are the innovators, the achievers, and the pioneers of the worlds.', NULL, NULL, NULL, NULL),
+('Tiefling', 'To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the lot of the tiefling. And to twist the knife, tieflings know that this is because a pact struck generations ago infused the essence of Asmodeus—overlord of the Nine Hells—into their bloodline. Their appearance and their nature are not their fault but the result of an ancient sin, for which they and their children and their children’s children will always be held accountable.', 1007, 1005, 2, 1)
+
+
+
+
+
+INSERT INTO racialAbilities
+VALUES
+( 6, 'Speed', 'Your base walking speed is 30 feet.'),
+(6, 'Darkvision', 'Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.'),
+(6, 'Keen Senses', 'You have proficiency in the Perception skill.'),
+(6, 'Fey Ancestry', 'You have advantage on saving throws against being charmed, and magic can’t put you to sleep.'),
+(6, 'Trance', 'Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.'),
+(6, 'Elf Weapon Training', 'You have proficiency with the longsword, shortsword, shortbow, and longbow.'),
+(6, 'Fey Step', 'You can cast the misty step spell once using this trait. You regain the ability to do so when you finish a short or long rest.'),
+
+( 7, 'Speed', 'Your base walking speed is 30 feet.'),
+(7, 'Darkvision', 'Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.'),
+(7, 'Keen Senses', 'You have proficiency in the Perception skill.'),
+(7, 'Fey Ancestry', 'You have advantage on saving throws against being charmed, and magic can’t put you to sleep.'),
+(7, 'Trance', 'Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.'),
+(7, 'Elf Weapon Training', 'You have proficiency with the longsword, shortsword, shortbow, and longbow.'),
+(7, 'Cantrip', 'You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.'),
+(7, 'Extra Language', 'You can speak, read, and write one extra language of your choice.'),
+
+
+( 8, 'Fleet of Foot', 'Your base walking speed increases to 35 feet.'),
+(8, 'Darkvision', 'Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.'),
+(8, 'Keen Senses', 'You have proficiency in the Perception skill.'),
+(8, 'Fey Ancestry', 'You have advantage on saving throws against being charmed, and magic can’t put you to sleep.'),
+(8, 'Trance', 'Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.'),
+(8, 'Elf Weapon Training', 'You have proficiency with the longsword, shortsword, shortbow, and longbow.'),
+(8, 'Mask of the Wild', 'You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.'),
+( 9, 'Speed', 'Your base walking speed is 30 feet.'), 
+( 9, 'Draconic Ancestry', 'You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type.'),
+( 10, 'Speed', 'Your base walking speed is 25 feet.'), 
+(10, 'Darkvision', 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.'),
+(10, 'Dwarven Resilience', 'You have advantage on saving throws against poison, and you have resistance against poison damage.'),
+(10, 'Dwarven Combat Training', 'You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.'),
+(10, 'Tool proficiency', 'You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.'),
+(10, 'Stonecunning', 'Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.'),
+(10, 'Dwarven Toughness', 'Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.'),
+(11, 'Speed', 'Your base walking speed is 25 feet.'), 
+(11, 'Darkvision', 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.'),
+(11, 'Dwarven Resilience', 'You have advantage on saving throws against poison, and you have resistance against poison damage.'),
+(11, 'Dwarven Combat Training', 'You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.'),
+(11, 'Tool proficiency', 'You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.'),
+(11, 'Stonecunning', 'Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.'),
+(11, 'Proficiencies', 'You can replace all the proficiencies granted by the Dwarven Armor Training trait to another proficiency of your choice.'),
+(11, 'Dwarven Armor Training', 'You have proficiency with light and medium armor.'),
+(21, 'Speed', 'Your base walking speed is 30 feet.'),
+(21, 'Darkvision', 'Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.'),
+(21, 'Hellish Resistance', 'You have resistance to fire damage.'),
+(21, 'Infernal Legacy', 'You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.'),
+
+(20, 'Ability Score Increase', ' Your ability scores each increase by 1.'),
+(20, 'Speed', 'Your base walking speed is 30 feet.'),
+
+(19, 'Speed', 'Your base walking speed is 30 feet.'),
+(19, 'Darkvision', 'Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.'),
+(19, 'Menacing', 'You gain proficiency in the Intimidation skill.'),
+(19, 'Relentless Endurance', 'When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest.'),
+(19, 'Savage Attacks', 'When you score a critical hit with a melee weapon attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit.'),
+
+(16, 'Speed', 'Your base walking speed is 25 feet.'),
+(16, 'Lucky', 'When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.'),
+(16, 'Brave', 'You have advantage on saving throws against being frightened.'),
+(16, 'Halfling Nimbleness', 'You can move through the space of any creature that is of a size larger than yours.'),
+(16, 'Naturally Stealthy', 'You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you.'),
+(17, 'Speed', 'Your base walking speed is 25 feet.'),
+(17, 'Lucky', 'When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.'),
+(17, 'Brave', 'You have advantage on saving throws against being frightened.'),
+(17, 'Halfling Nimbleness', 'You can move through the space of any creature that is of a size larger than yours.'),
+(17, 'Stout Resilience', 'You have advantage on saving throws against poison, and you have resistance against poison damage.'),
+
+(15, 'Speed', 'Your base walking speed is 30 feet.'),
+(15, 'Darkvision', 'Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.'),
+(15, 'Fey Ancestry', 'You have advantage on saving throws against being charmed, and magic can’t put you to sleep.'),
+(15, 'Skill Versatility', 'You gain proficiency in two skills of your choice.'),
+
+(12, 'Speed', 'Your base walking speed is 25 feet.'),
+(12, 'Darkvision', 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can''t discern color in darkness, only shades of gray.'),
+(12, 'Gnome Cunning', 'You have advantage on all Intelligence, Wisdom, and Charisma saves against magic.'),
+(12, 'Natural Illusionist', 'You know the Minor Illusion cantrip. Intelligence is your spellcasting modifier for it.'),
+(12, 'Speak with Small Beasts', 'Through sound and gestures, you may communicate simple ideas with Small or smaller beasts.'),
+
+(14, 'Artificer''s Lore', 'Whenever you make an Intelligence (History) check related to magical, alchemical, or technological items, you can add twice your proficiency bonus instead of any other proficiency bonus that may apply.'),
+(14, 'Tinker', 'You have proficiency with artisan tools (tinker''s tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time. When you create a device, choose one of the following options:<br/>
+Clockwork Toy. This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.<br/>
+Fire Starter. The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.<br/>
+Music Box. When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song''s end or when it is closed.<br/>
+At your DM''s discretion, you may make other objects with effects similar in power to these. The Prestidigitation cantrip is a good baseline for such effects.'),
+(14, 'Speed', 'Your base walking speed is 25 feet.'),
+(14, 'Darkvision', 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can''t discern color in darkness, only shades of gray.'),
+(14, 'Gnome Cunning', 'You have advantage on all Intelligence, Wisdom, and Charisma saves against magic.'),
+
+(13, 'Speed', 'Your base walking speed is 25 feet.'),
+(13, 'Darkvision', 'Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can''t discern color in darkness, only shades of gray.'),
+(13, 'Gnome Cunning', 'You have advantage on all Intelligence, Wisdom, and Charisma saves against magic.'),
+(13, 'Gifted Scribe', 'Whenever you make an Intelligence (History) or an Ability Check involving Calligrapher''s Supplies, you can roll a d4 and add the number rolled to the total ability check.'),
+(13, 'Scribe''s Insight', 'You know the Message cantrip. You can also cast the Comprehend Languages spell with this trait. Starting at 3rd level, you can also cast the Magic Mouth spell with it. Once you cast either spell with this trait, you can''t cast that spell again until you finish a Long Rest. Intelligence is your Spellcasting Ability for these spells.'),
+(13, 'Spells of the Mark', 'If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Scribing Spells table are added to the spell list of your Spellcasting class.')
+
+
+
+
+
+
+
+
