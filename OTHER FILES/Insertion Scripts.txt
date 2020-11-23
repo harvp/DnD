@@ -282,6 +282,177 @@ At your DM''s discretion, you may make other objects with effects similar in pow
 (13, 'Spells of the Mark', 'If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Scribing Spells table are added to the spell list of your Spellcasting class.')
 
 
+INSERT INTO Feats
+VALUES
+(	'Actor',	'+1 in Cha., advantage on Deception and Performance checks, mimic the speech of a person or the sounds made by a creature.',	NULL	),
+(	'Alert',	'+5 to initiative, you can''t be surprised, and creatures you don''t see don''t gain advantage on attack roll against you.',	NULL	),
+(	'Athlete',	'+1 in Str. or Dex., you stand up and climb more quickly, and you can jump with only a 5-ft run.',	NULL	),
+(	'Bountiful Luck',	'You can let an ally within 30 ft of you to reroll a 1 on a d20.',	'RACE:Halfling'	),
+(	'Charger',	'As part of the Dash action you can make a melee attack with a +5 bonus if you move at least 10 ft before.',	NULL	),
+(	'Crossbow Expert',	'You ignore the loading property of crossbows and don''t have disadvantage for being in contact with a creature when you shoot.',	NULL	),
+(	'Defensive Duelist',	'You can add you proficiency bonus to your AC if you are wielding a finesse weapon.',	'ABILITY:DEXTERITY:13'	),
+(	'Dragon Fear',	'+1 in Str., Con., or Cha. and your Breath Weapon can frighten instead of inflicting damages.',	'RACE:Dragonborn'	),
+(	'Dragon Hide',	'+1 in Str., Con., or Cha., your AC becomes 13+Dex. modifier and your retractable claws deal 1d4+Str. modifier slashing damage.',	'RACE:Dragonborn'	),
+(	'Drow High Magic',	'You can cast the detect magic spell (at will) and the levitate and dispel magic spells (1/long rest).',	'RACE:Elf'	),
+(	'Dual Wieldwe',	'+1 to CA if you''re wielding a melee weapon in each hand, two-weapon fighting with non-light weapon, draw two weapons.',	NULL	),
+(	'Dungeon Delver',	'Advantage to Perception and Investigation checks, to saving throws vs traps, and search for traps at normal pace.',	NULL	),
+(	'Durable',	'+1 in Con. and for each Hit Dice you regain a minimum of hit points equals to 2 x your Constitution modifier.',	NULL	),
+(	'Dwarf Fortitude',	'+1 in Con., and you can spend one Hit Die to heal yourself taking the Dodge action.',	'RACE:Dwarf'	),
+(	'Elemental Adept',	'Your spells ignore resistance to a damage type (acid, cold, fire, lightning, or thunder) and treat any 1 in damage as a 2.',	'Must have a spellcaster class'	),
+(	'Elven Accuracy',	'+1 in Dex., Int., Wis., or Cha., and you can reroll one attack roll if you have advantage.',	'RACE:Elf RACE:Half-Elf'	),
+(	'Fade Away',	'+1 in Dex. or Int., and you can use your reaction to become invisible if you take damage.',	'RACE:Gnome'	),
+(	'Fey Transportation',	'+1 in Int. or Cha., you speak Sylvan, and you can cast the misty step spell (1/short rest).',	'RACE:Elf'	),
+(	'Flames of Phlegethos',	'+1 in Int. or Cha., reroll any 1 on fire spell damage, and cause flames to wreathe you if you cast a fire spell.',	'RACE:Tiefling'	),
+(	'Grappler',	'You have advantage on attack rolls when grappling, and can try to restrained a creature grappled by you.',	'ABILITY:STRENGTH:13'	),
+(	'Great Weapon Master',	'Extra attack after a melee critical hit and you can choose to take -5 to attack roll to add +10 to damage with an heavy weapon.',	NULL	),
+(	'Healer',	'You can stabilize a creature and restore it to 1 hp, or restore [1d6+4+its number of Hit Dice] hp to it.',	NULL	),
+(	'Heavily Armored',	'+1 in Str. and you gain proficiency with heavy armor.',	'PROFICIENCY:Medium Armor Proficiency'	),
+(	'Heavy Armor Master',	'+1 in Str. and bludgeoning, piercing, and slashing damage are reduced by 3 if you are wearing an heavy armor.',	'PROFICIENCY:Heavy Armor Proficiency'	),
+(	'Infernal Constitution',	'+1 in Con., resistance to cold and poison damage, and you have advantage on saving throws against being poisoned.',	'RACE:Tiefling'	),
+(	'Inspiring Leader',	'Up to 6 creatures within 30 ft of you can gain temporary hp equal to your levei + your Cha. modifier.',	'ABILITY:CHARISMA:13'	),
+(	'Keen Mind',	'+1 in Int., you know which way is north, when is the next sunrise/sunset, and recall any events within the past month.',	NULL	),
+(	'Lightly Armored',	'+1 in Str. or Dex. and you gain profociency with light armor.',	NULL	),
+(	'Linguist',	'+1 in Int., you learn three languages, and you can ably create ciphers.',	NULL	),
+(	'Lucky',	'You can reroll one d20 or force to reroll an attack roll against you (3/long rest).',	NULL	),
+(	'Mage Slayer',	'You can use a reaction to make a melee attack against a spellcaster and advantage on saving throws against spell within 5 ft.',	NULL	),
+(	'Magic Initiate',	'You learn two cantrips and one 1st-level spell from one class.',	NULL	),
+(	'Martial Adept',	'You learn two maneuvers from Battle Master archetype and gain one superiority die (d6).',	NULL	),
+(	'Medium Armor Master',	'Wearing medium armor doesn’t impose disadvantage on your Dexterity (Stealth) checks. When you wear medium armor, you can add 3, rather than 2, to your AC if you have a Dexterity of 16 or higher.',	'Proficiency: Medium Armor'	),
+(	'Mobile',	'Your speed increases by 10 feet.  When you use the Dash action, difficult terrain doesn’t cost you extra movement on that turn. When you make a melee attack against a creature, you don’t provoke opportunity attacks from that creature for the rest o f the turn, whether you hit or not.',	NULL	),
+(	'Moderately Armored',	'Increase your Strength or Dexterity score by 1, to a maximum of 20.  You gain proficiency with medium armor and shields.',	'PROFICIENCY:Light Armor'	),
+(	'Mounted Combatant',	'While you are mounted and aren’t incapacitated, you gain the following benefits: You have advantage on melee attack rolls against any unmounted creature that is smaller than your mount. You can force an attack targeted at your mount to target you instead. If your mount is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.',	NULL	),
+(	'Observant',	'Increase your Intelligence or Wisdom score by 1, to a maximum of 20. If you can see a creature’s mouth while it is speaking a language you understand, you can interpret what it’s saying by reading its lips. You have a +5 bonus to your passive Wisdom (Perception) and passive Intelligence (Investigation) scores.',	NULL	),
+(	'Polearm Master',	'When you take the Attack action and attack with only a glaive, halberd, or quarterstaff, you can use a bonus action to make a melee attack with the opposite end of the weapon. The weapon’s damage die for this attack is a d4, and the attack deals bludgeoning damage. While you are wielding a glaive, halberd, pike, or quarterstaff, other creatures provoke an opportunity attack from you when they enter your reach.',	NULL	),
+(	'Resilient',	'Choose one ability score. You gain the following benefits: Increase the chosen ability score by 1, to a maximum of 20. You gain proficiency in saving throws using the chosen ability.',	NULL	),
+(	'Ritual Caster',	'You have learned a number of spells that you can cast as rituals. These spells are written in a ritual book, which you must have in hand while casting one of them.When you choose this feat, you acquire a ritual book holding two 1st-level spells of your choice. Choose one of the following classes: bard, cleric, druid, sorcerer, warlock, or wizard. You must choose your spells from that class’s spell list, and the spells you choose must have the ritual tag. The class you choose also determines your spellcasting ability for these spells: Charisma for bard, sorcerer, or warlock; Wisdom for cleric or druid; or Intelligence for wizard. If you come across a spell in written form, such as a magical spell scroll or a wizard’s spellbook, you might be able to add it to your ritual book. The spell must be on the spell list for the class you chose, the spell’s level can be no higher than half your level (rounded up), and it must have the ritual tag. The process of copying the spell into your ritual book takes 2 hours per level of the spell, and costs 50 gp per level. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it.',	'ABILITY:INTELLIGENCE 13 or WISDOM 13'	),
+(	'Savage Attacker',	'Once per turn when you roll damage for a melee weapon attack, you can reroll the weapon’s damage dice and use either total.',	NULL	),
+(	'Sentinel',	'When you hit a creature with an opportunity attack, the creature’s speed becomes 0 for the rest of the turn. Creatures within 5 feet of you provoke opportunity attacks from you even if they take the Disengage action before leaving your reach. When a creature within 5 feet of you makes an attack against a target other than you (and that target doesn’t have this feat), you can use your reaction to make a melee weapon attack against the attacking creature.',	NULL	),
+(	'Sharpshooter',	'Attacking at long range doesn''t impose disadvantage on your ranged weapon attack rolls. Your ranged weapon attacks ignore half cover and three-quarters cover. Before you make an attack with a ranged weapon that you are proficient with, you can choose to take a - 5 penalty to the attack roll. If the attack hits, you add +10 to the attack’s damage.',	NULL	),
+(	'Shield Master',	'You gain the following benefits while you are wielding a shield: If you take the Attack action on your turn, you can use a bonus action to try to shove a creature within 5 feet of you with your shield. If you aren’t incapacitated, you can add your shield’s AC bonus to any Dexterity saving throw you make against a spell or other harmful effect that targets only you. If you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can use your reaction to take no damage if you succeed on the saving throw, interposing your shield between yourself and the source of the effect.',	NULL	),
+(	'Skilled',	'You gain proficiency in any combination of three skills or tools of your choice.',	NULL	),
+(	'Skulker',	'You can try to hide when you are lightly obscured from the creature from which you are hiding. When you are hidden from a creature and miss it with a ranged weapon attack, making the attack doesn''t reveal your position. Dim light doesn''t impose disadvantage on your Wisdom (Perception) checks relying on sight.',	'ABILITY:DEXTERITY 13'	),
+(	'Spell Sniper',	'When you cast a spell that requires you to make an attack roll, the spell’s range is doubled. Your ranged spell attacks ignore half cover and three-quarters cover. You learn one cantrip that requires an attack roll. Choose the cantrip from the bard, cleric, druid, sorcerer, warlock, or wizard spell list. Your spellcasting ability for this cantrip depends on the spell list you chose from: Charisma for bard, sorcerer, or warlock; Wisdom for cleric or druid; or Intelligence for wizard.',	'The ability to cast at least one spell'	),
+(	'Tavern Brawler',	'Increase your Strength or Constitution score by 1, to a maximum of 20. You are proficient with improvised weapons and unarmed strikes. Your unarmed strike uses a d4 for damage. When you hit a creature with an unarmed strike or an improvised weapon on your turn, you can use a bonus action to attempt to grapple the target.',	NULL	),
+(	'Tough',	'Your hit point maximum increases by an amount equal to twice your level when you gain this feat. Whenever you gain a level thereafter, your hit point maximum increases by an additional 2 hit points.',	NULL	),
+(	'War Caster',	'You have advantage on Constitution saving throws that you make to maintain your concentration on a spell when you take damage. You can perform the somatic components of spells even when you have weapons or a shield in one or both hands. When a hostile creature’s movement provokes an opportunity attack from you, you can use your reaction to cast a spell at the creature, rather than making an opportunity attack. The spell must have a casting time of 1 action and must target only that creature.',	'The ability to cast at least one spell'	),
+(	'Weapon Master',	'Increase your Strength or Dexterity score by 1, to a maximum of 20. You gain proficiency with four weapons of your choice.',	NULL	)
+
+
+INSERT INTO Languages
+VALUES
+
+('Common', 'Language of humans, halflings, half-elves, and half-orcs.'),
+('Dwarvish',  'Spoken by dwarves.'),
+('Elvish',  'Spoken by elves.'),
+('Giant',  'Language of the giants and ogres.'),
+('Gnomish',  'Spoken by gnomes'),
+('Goblin',  'Language of goblinoids, hobgoblins, and bugbears.'),
+('Halfling',  'Language of the halflings.'),
+('Orc',  'Spoken by orcs and half-orcs.'),
+('Draconic',  'Spoken by dragonborn, kobolds, and dragons.'),
+('Abyssal',  'Language of demons, chaotic evil outsiders.'),
+('Celestial',  'Spoken by angels and devas.'),
+('Deep Speech',  'Cryptic tongue of mindflayers and beholders.'),
+('Infernal',  'Spoken by devils and tieflings.'),
+('Primordial',  'Language of elemental beings.'),
+('Sylvan',  'Spoken by fey creatures like dryads and treants.'),
+('Undercommon', 'Common language of the Underdark.') 
+
+INSERT INTO Weapons
+VALUES
+('Club', '1d4', 0, 185, 'bludgeoning', 'light'),
+('Dagger', '1d4', 0, 185, 'piercing', 'finesse, light'),
+('Dagger, thrown', '1d4', 20, 185, 'piercing', 'finesse, light, thrown (range 20/60)'),
+('Greatclub', '1d4', 0, 185, 'bludgeoning', 'two-handed'),
+('Handaxe', '1d6', 0, 185, 'slashing', 'light'),
+('Handaxe, thrown', '1d6', 20, 185, 'slashing', 'light, thrown (range 20/60)'),
+('Light hammer', '1d4', 0, 185, 'bludgeoning', 'light'),
+('Light hammer, thrown', '1d4', 20, 185, 'bludgeoning', 'light, thrown (range 20/60)'),
+('Mace', '1d6', 0, 185, 'bludgeoning', NULL),
+('Quarterstaff', '1d6', 0, 185, 'bludgeoning', 'versatile (1d8)'),
+('Sickle', '1d4', 0, 185, 'slashing', 'light'),
+('Spear', '1d6', 0, 185, 'piercing', 'versatile (1d8)'),
+('Spear, thrown', '1d6', 20, 185, 'piercing', 'thrown (range 20/60)'),
+('Javelin', '1d6', 0, 185, 'piercing', NULL),
+('Javelin, thrown', '1d6', 30, 185, 'piercing', 'thrown (range 30/120)'),
+('Crossbow', '1d8', 80, 185, 'piercing', 'ammunition (range 80/320), loading, two-handed'),
+('Dart', '1d4', 20, 185, 'piercing', 'finesse, thrown (range 20/60)'),
+('Shortbow', '1d6', 80, 185, 'piercing', 'ammunition (range 80/320), two-handed'),
+('Sling', '1d4', 30, 185, 'bludgeoning', 'ammunition (range 30/120)'),
+('Battleaxe', '1d8', 0, 161, 'slashing', 'versatile (1d10)'),
+('Flail', '1d8', 0, 161, 'bludgeoning', NULL),
+('Glaive', '1d10', 0, 161, 'slashing', 'heavy, reach, two-handed'),
+('Greataxe', '1d12', 0, 161, 'slashing', 'heavy, two-handed'),
+('Greatsword', '2d6', 0, 161, 'slashing', 'heavy, two-handed'),
+('Halberd', '1d10', 0, 161, 'slashing', 'heavy, reach, two-handed'),
+('Lance', '1d12', 0, 161, 'piercing', 'reach, special'),
+('Longsword', '1d8', 0, 161, 'slashing', 'versatile (1d10)'),
+('Maul', '2d6', 0, 161, 'bludgeoning', 'heavy, two-handed'),
+('Morningstar', '1d8', 0, 161, 'piercing', NULL),
+('Pike', '1d10', 0, 161, 'piercing', 'heavy, reach, two-handed'),
+('Rapier', '1d8', 0, 161, 'piercing', 'finesse'),
+('Scimitar', '1d6', 0, 161, 'slashing', 'finesse, light'),
+('Shortsword', '1d6', 0, 161, 'piercing', 'finesse, light'),
+('Trident', '1d6', 0, 161, 'piercing', 'versatile (1d8)'),
+('Trident', '1d6', 20, 161, 'piercing', 'thrown (range 20/60)'),
+('War pick', '1d8', 0, 161, 'piercing', NULL),
+('Warhammer', '1d8', 0, 161, 'bludgeoning', 'versatile (1d10)'),
+('Whip', '1d4', 0, 161, 'slashing', 'finesse, reach'),
+('Blowgun', '1', 25, 161, 'piercing', 'ammunition (range 25/100), loading'),
+('Crossbow, hand', '1d6', 30, 161, 'piercing', 'ammunition (range 30/120), light, loading'),
+('Crossbow, heavy', '1d8', 100, 161, 'piercing', 'ammunition (range 100/400), heavy, loading, two-handed'),
+('Longbow', '1d10', 150, 161, 'piercing', 'ammunition (range 150/600), heavy, two-handed'),
+('Net', '-', 5, 161, 'piercing', 'special, thrown (range 5/15)')
+
+INSERT INTO Armor
+VALUES
+('Padded', 11, 10, 153 , 5, 0),
+('Leather', 11, 10, 153 , 10, 0),
+('Studded leather', 12, 10, 153 , 45, 0),
+('Hide', 12, 2, 165, 10, 0),
+('Chain shirt', 13, 2, 165, 500, 0),
+('Scale mail', 14, 2, 165, 500, 0),
+('Breastplate', 14, 2, 165, 400, 0),
+('Half plate', 15, 2, 165, 750, 0),
+('Ring mail', 14, 0, 142, 30, 0),
+('Chain mail', 16, 0, 142, 75, 13),
+('Splint', 17, 0, 142, 200, 15),
+('Plate', 18, 0, 142, 1500, 15)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
