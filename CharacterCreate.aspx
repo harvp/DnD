@@ -77,7 +77,14 @@
     <p>
         <input id="nameField" type="text" /> &nbsp; &nbsp; &nbsp; <asp:Button ID="enterName" runat="server" Text="Enter name" OnClick="nameConfirm" />
         </p>
+
+        <asp:Image id="Image1" runat="server"
+           AlternateText="Image text"
+           ImageAlign="left"
+           ImageUrl="images/image1.jpg"/>
     </form>
+    
+
     <table style="width:100%">
         <tr>
             <th>

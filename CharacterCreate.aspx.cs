@@ -25,6 +25,14 @@ namespace DnD
 
         }
 
+        protected void updateClassImg(object sender, EventArgs e)
+    {
+        if (classSelect == 1002)
+            Image1. = "You have opeted for online tutorial.";
+        else
+            lblMessage.ImageURL= "http://papermoondance.com/wp-content/uploads/2019/05/It-Must-Be-a-Duck-862x862.jpg";
+    }
+
         
         
         
