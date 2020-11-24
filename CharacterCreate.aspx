@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CharacterCreate.aspx.cs" Inherits="DnD.CharacterCreate" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CharacterCreate.aspx.cs" Inherits="DnD.CharacterCreate" %>
 
 <!DOCTYPE html>
 
@@ -68,6 +68,10 @@
         th, td {
             padding: 15px;
         }
+        .img{
+            height : 54px;
+            width : 50px;
+        }
     </style>
 </head>
 <body>
@@ -78,11 +82,11 @@
         <input id="nameField" type="text" /> &nbsp; &nbsp; &nbsp; <asp:Button ID="enterName" runat="server" Text="Enter name" OnClick="nameConfirm" />
         </p>
 
-        <asp:Image id="Image1" runat="server"
-           AlternateText="Image text"
+        <asp:Image id="image1" runat="server"
+           CssClass="img" 
            ImageAlign="left"
-           ImageUrl="images/image1.jpg"/>
-    </form>
+           ImageUrl=""/>
+    
     
 
     <table style="width:100%">
@@ -108,20 +112,21 @@
                 </select></th>
             <th>
                 Choose Class
-                <select id="classSelect" name="classSelect" runat="server">
-                    <option value="1002">Barbarian</option>
-                    <option value="1003">Bard</option>
-                    <option value="1004">Cleric</option>
-                    <option value="1005">Druid</option>
-                    <option value="1006">Fighter</option>
-                    <option value="1007">Monk</option>
-                    <option value="1008">Paladin</option>
-                    <option value="1009">Ranger</option>
-                    <option value="1010">Rogue</option>
-                    <option value="1011">Sorcerer</option>
-                    <option value="1012">Warlock</option>
-                    <option value="1013">Wizard</option>
-                </select></th>
+                <asp:DropDownList id="classSelect" name="classSelect" runat="server" 
+                AutoPostBack="true" OnSelectedIndexChanged="updateClassImg" >
+                    <asp:ListItem value="1002">Barbarian</asp:ListItem>
+                    <asp:ListItem value="1003">Bard</asp:ListItem>
+                    <asp:ListItem value="1004">Cleric</asp:ListItem>
+                    <asp:ListItem value="1005">Druid</asp:ListItem> 
+                    <asp:ListItem value="1006">Fighter</asp:ListItem>
+                    <asp:ListItem value="1007">Monk</asp:ListItem>
+                    <asp:ListItem value="1008">Paladin</asp:ListItem>
+                    <asp:ListItem value="1009">Ranger</asp:ListItem>
+                    <asp:ListItem value="1010">Rogue</asp:ListItem>
+                    <asp:ListItem value="1011">Sorcerer</asp:ListItem>
+                    <asp:ListItem value="1012">Warlock</asp:ListItem>
+                    <asp:ListItem value="1013">Wizard</asp:ListItem>
+                </asp:DropDownList></th>
         </tr>
         <tr>
             <th>
@@ -163,6 +168,8 @@
                 </select></th>
         </tr>
     </table>
+
+</form>
     <table style="width:50%">
         <tr>
             <tr>
