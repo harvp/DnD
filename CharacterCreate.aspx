@@ -72,6 +72,15 @@
             height : 54px;
             width : 50px;
         }
+        .btn {
+            margin: 0;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+            color: #222;
+            padding-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -82,7 +91,12 @@
         <input id="nameField" type="text" /> &nbsp; &nbsp; &nbsp; <asp:Button ID="enterName" runat="server" Text="Enter name" OnClick="nameConfirm" />
         </p>
 
-        <asp:Image id="image1" runat="server"
+        <asp:Image id="raceImage" runat="server"
+           CssClass="img" 
+           ImageAlign="left"
+           ImageUrl=""/>
+
+           <asp:Image id="classImage" runat="server"
            CssClass="img" 
            ImageAlign="left"
            ImageUrl=""/>
@@ -93,27 +107,30 @@
         <tr>
             <th>
                 Choose Race
-                <select id="raceSelect" name="raceSelect" runat="server">
-                    <option value="6">Elf: Eladrin</option>
-                    <option value="7">Elf: High Elf</option>
-                    <option value="8">Elf: Wood Elf</option>
-                    <option value="9">Dragonborn</option>
-                    <option value="10">Dwarf: Hill Dwarf</option>
-                    <option value="11">Dwarf: Mountain Dwarf</option>
-                    <option value="12">Gnome: Forest Gnome</option>
-                    <option value="13">Gnome: Deep Gnome</option>
-                    <option value="14">Gnome: Rock Gnome</option>
-                    <option value="15">Half-Elf</option>
-                    <option value="16">Halfling: Lightfoot</option>
-                    <option value="17">Halfling: Stout</option>
-                    <option value="19">Half-Orc</option>
-                    <option value="20">Human</option>
-                    <option value="21">Tiefling</option>
-                </select></th>
+                <asp:DropDownList id="raceSelect" name="raceSelect" runat="server" 
+                AutoPostBack="true" OnSelectedIndexChanged="updateRaceImg">
+                    <asp:ListItem value="6">Elf: Eladrin</asp:ListItem>
+                    <asp:ListItem value="7">Elf: High Elf</asp:ListItem>
+                    <asp:ListItem value="8">Elf: Wood Elf</asp:ListItem>
+                    <asp:ListItem value="9">Dragonborn</asp:ListItem>
+                    <asp:ListItem value="10">Dwarf: Hill Dwarf</asp:ListItem>
+                    <asp:ListItem value="11">Dwarf: Mountain Dwarf</asp:ListItem>
+                    <asp:ListItem value="12">Gnome: Forest Gnome</asp:ListItem>
+                    <asp:ListItem value="13">Gnome: Deep Gnome</asp:ListItem>
+                    <asp:ListItem value="14">Gnome: Rock Gnome</asp:ListItem>
+                    <asp:ListItem value="15">Half-Elf</asp:ListItem>
+                    <asp:ListItem value="16">Halfling: Lightfoot</asp:ListItem>
+                    <asp:ListItem value="17">Halfling: Stout</asp:ListItem>
+                    <asp:ListItem value="19">Half-Orc</asp:ListItem>
+                    <asp:ListItem value="20">Human</asp:ListItem>
+                    <asp:ListItem value="21">Tiefling</asp:ListItem>
+                </asp:DropDownList>
+                
+            </th>
             <th>
                 Choose Class
                 <asp:DropDownList id="classSelect" name="classSelect" runat="server" 
-                AutoPostBack="true" OnSelectedIndexChanged="updateClassImg" >
+                AutoPostBack="true" OnSelectedIndexChanged="updateClassImg">
                     <asp:ListItem value="1002">Barbarian</asp:ListItem>
                     <asp:ListItem value="1003">Bard</asp:ListItem>
                     <asp:ListItem value="1004">Cleric</asp:ListItem>
@@ -126,7 +143,8 @@
                     <asp:ListItem value="1011">Sorcerer</asp:ListItem>
                     <asp:ListItem value="1012">Warlock</asp:ListItem>
                     <asp:ListItem value="1013">Wizard</asp:ListItem>
-                </asp:DropDownList></th>
+                </asp:DropDownList>
+            </th>
         </tr>
         <tr>
             <th>
@@ -169,7 +187,7 @@
         </tr>
     </table>
 
-</form>
+
     <table style="width:50%">
         <tr>
             <tr>
@@ -180,33 +198,67 @@
             </tr>
             <tr>
                 <th>Strength</th>
-                <th><input type="text" id="Str" name="Str"></th>
-                <th><input button></th>
+                <th>
+                    <asp:Button text="-" OnClick="updateAbility" id="strDwn" runat="server"></asp:Button>
+                    <asp:Label id="Str" text="10" runat="server"></asp:Label>
+                    <asp:Button text="+" OnClick="updateAbility" id="strUp" runat="server"></asp:Button>
+                </th>
+                <th><asp:Label id="rStr" text="0" runat="server"></asp:Label></th>
+                <th><asp:Label id="fStr" runat="server"></asp:Label></th>
             </tr>
             <tr>
                 <th>Dextarity</th>
-                <th><input type="text" id="Dex" name="Dex"></th>
+                <th>
+                    <asp:Button text="-" OnClick="updateAbility" id="dexDwn" runat="server"></asp:Button>
+                    <asp:Label id="Dex" text="10" runat="server"></asp:Label>
+                    <asp:Button text="+" OnClick="updateAbility" id="dexUp" runat="server"></asp:Button>
+                </th>
+                <th><asp:Label id="rDex" text="0" runat="server"></asp:Label></th>
+                <th><asp:Label id="fDex" runat="server"></asp:Label></th>
             </tr>
             <tr>
                 <th>Constitution</th>
-                <th><input type="text" id="Con" name="Con"></th>
-            </tr>
+                <th>
+                    <asp:Button text="-" OnClick="updateAbility" id="conDwn" runat="server"></asp:Button>
+                    <asp:Label id="Con" text="10" runat="server"></asp:Label>
+                    <asp:Button text="+" OnClick="updateAbility" id="conUp" runat="server"></asp:Button>
+                </th>
+                <th><asp:Label id="rCon" text="0" runat="server"></asp:Label></th>
+                <th><asp:Label id="fCon" runat="server"></asp:Label></th>
             <tr>
                 <th>Itelligence</th>
-                <th><input type="text" id="Int" name="Int"></th>
+                <th>
+                    <asp:Button text="-" OnClick="updateAbility" id="intDwn" runat="server"></asp:Button>
+                    <asp:Label id="Int" text="10" runat="server"></asp:Label>
+                    <asp:Button text="+" OnClick="updateAbility" id="intUp" runat="server"></asp:Button>
+                </th>
+                <th><asp:Label id="rInt" text="0" runat="server"></asp:Label></th>
+                <th><asp:Label id="fInt" runat="server"></asp:Label></th>
             </tr>
             <tr>
                 <th>Wisdom</th>
-                <th><input type="text" id="Wis" name="Wis"></th>
+                <th>
+                    <asp:Button text="-" OnClick="updateAbility" id="wisDwn" runat="server"></asp:Button>
+                    <asp:Label id="Wis" text="10" runat="server"></asp:Label>
+                    <asp:Button text="+" OnClick="updateAbility" id="wisUp" runat="server"></asp:Button>
+                </th>
+                <th><asp:Label id="rWis" text="0" runat="server"></asp:Label></th>
+                <th><asp:Label id="fWis" runat="server"></asp:Label></th>
             </tr>
             <tr>
                 <th>Charisma</th>
-                <th><input type="text" id="Cha" name="Cha"></th>
+                <th>
+                    <asp:Button text="-" OnClick="updateAbility" id="chaDwn" runat="server"></asp:Button>
+                    <asp:Label id="Cha" text="10" runat="server"></asp:Label>
+                    <asp:Button text="+" OnClick="updateAbility" id="chaUp" runat="server"></asp:Button>
+                </th>
+                <th><asp:Label id="rCha" text="0" runat="server"></asp:Label></th>
+                <th><asp:Label id="fCha" runat="server"></asp:Label></th>
             </tr>
 
         </tr>
     </table>
-        
+</form>   
     <p>
         Enter Abilities</p>
     <p>
