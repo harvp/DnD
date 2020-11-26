@@ -61,13 +61,23 @@
         #weapons {
             width: 300px;
         }
-        table, th, td {
+        table {
+            border: 30px solid transparent;
+            padding: 0px;
+            border-image: url(images/border.png) repeat round;
+            border-image-slice: 19;
+        }
+        th, td {
             border: 1px solid black;
             border-collapse: collapse;
         }
         th, td {
-            padding: 15px;
+            padding: 10px;
         }
+        tr {
+            
+        }
+        
         .img{
             height : 54px;
             width : 50px;
@@ -102,7 +112,7 @@
            ImageUrl=""/>
     
     
-
+    
     <table style="width:100%">
         <tr>
             <th>
@@ -186,15 +196,22 @@
                 </select></th>
         </tr>
     </table>
+    
 
-
-    <table style="width:50%">
+    <table style="width:100%">
         <tr>
             <tr>
                 <th>Abilities</th>
                 <th>Brute Score</th>
                 <th>Racial Bonus</th>
                 <th>Final Score</th>
+                <td rowspan="7" style="width:50%">
+                    <h3>Class Description:</h3>
+                    <asp:Label id="classInfo" text="gibberish3" runat="server"></asp:Label>
+                    <br />
+                    <h3>Race Description:</h3>
+                    <asp:Label id="raceInfo" text="gibberish" runat="server"></asp:Label>
+                </td>
             </tr>
             <tr>
                 <th>Strength</th>
@@ -255,7 +272,34 @@
                 <th><asp:Label id="rCha" text="0" runat="server"></asp:Label></th>
                 <th><asp:Label id="fCha" runat="server"></asp:Label></th>
             </tr>
-
+        </tr>
+    </table>
+    <table style="width:100%">
+        <tr>
+            <th style="text-align:left">
+                <asp:CheckBox ID="abi_athletics" runat="server" GroupName="ability" Text="Athletics" /> <br />
+                <asp:CheckBox ID="abi_acrobatics" runat="server" GroupName="ability" Text="Acrobatics" /> <br />
+                <asp:CheckBox ID="abi_slightofhand" runat="server" GroupName="ability" Text="Sleight of Hand" /> <br />
+                <asp:CheckBox ID="abi_stelth" runat="server" GroupName="ability" Text="Stealth" /> <br />
+                <asp:CheckBox ID="abi_arcana" runat="server" GroupName="ability" Text="Arcana" /> <br />
+                <asp:CheckBox ID="abi_history" runat="server" GroupName="ability" Text="History" /> <br />
+            </th>
+            <th style="text-align:left">
+                <asp:CheckBox ID="abi_investigation" runat="server" GroupName="ability" Text="Investigation" /> <br />
+                <asp:CheckBox ID="abi_nature" runat="server" GroupName="ability" Text="Nature" /> <br />
+                <asp:CheckBox ID="abi_religion" runat="server" GroupName="ability" Text="Religion" /> <br />
+                <asp:CheckBox ID="abi_animalhandling" runat="server" GroupName="ability" Text="Animal Handling" /> <br />
+                <asp:CheckBox ID="abi_insight" runat="server" GroupName="ability" Text="Insight" /> <br />
+                <asp:CheckBox ID="abi_medicine" runat="server" GroupName="ability" Text="Medicine" /> <br />
+            </th>
+            <th style="text-align:left">
+                <asp:CheckBox ID="abi_percption" runat="server" GroupName="ability" Text="Perception" /> <br />
+                <asp:CheckBox ID="abi_survival" runat="server" GroupName="ability" Text="Survival" /> <br />
+                <asp:CheckBox ID="abi_deception" runat="server" GroupName="ability" Text="Deception" /> <br />
+                <asp:CheckBox ID="abi_intimidation" runat="server" GroupName="ability" Text="Intimidation" /> <br />
+                <asp:CheckBox ID="abi_performance" runat="server" GroupName="ability" Text="Performance" /> <br />
+                <asp:CheckBox ID="abi_persuasion" runat="server" GroupName="ability" Text="Persuasion" /> <br />
+            </th>
         </tr>
     </table>
 </form>   
