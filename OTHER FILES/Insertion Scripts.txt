@@ -570,8 +570,21 @@ You create a nonmagical trinket or an illusory image that can fit in your hand a
 ('Power Word Kill', 'You utter a word of power that can compel one creature you can see within range to die instantly. If the creature you choose has 100 hit points or fewer, it dies. Otherwise, the spell has no effect.', '9', 'CLASS:Bard'),
 ('True Polymorph', 'Choose one creature or nonmagical object that you can see within range. You transform the creature into a different creature, the creature into an object, or the object into a creature (the object must be neither worn nor carried by another creature). The transformation lasts for the duration, or until the target drops to 0 hit points or dies. If you concentrate on this spell for the full duration, the transformation lasts until it is dispelled. This spell has no effect on a shapechanger or a creature with 0 hit points. An unwilling creature can make a Wisdom saving throw, and if it succeeds, it isn’t affected by this spell.', '9', 'CLASS:Bard'),
 
-('', '', '', ''),
+('Guidance', 'You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.', '0', 'CLASS:CLERIC'),
+('Light', 'You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.', '0', 'CLASS:CLERIC'),
+('Mending', 'This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage. This spell can physically repair a magic item or construct, but the spell can’t restore magic to such an object.', '0', 'CLASS:CLERIC'),
+('Resistance', 'You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after making the saving throw. The spell then ends.', '0', 'CLASS:CLERIC'),
+('Sacred Flame', 'Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw.', '0', 'CLASS:CLERIC'),
+('Spare the Dying', 'You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs.', '0', 'CLASS:CLERIC'),
+('Thaumaturgy', 'You manifest a minor wonder, a sign of supernatural power, within range. You create one of the following magical effects within range:
+	Your voice booms up to three times as loud as normal for 1 minute.
+	You cause flames to flicker, brighten, dim, or change color for 1 minute.
+	You cause harmless tremors in the ground for 1 minute.
+	You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.
+	You instantaneously cause an unlocked door or window to fly open or slam shut.
+	You alter the appearance of your eyes for 1 minute.', '0', 'CLASS:CLERIC'),
 
+('', '', '', ''),
 
 
 
