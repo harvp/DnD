@@ -722,10 +722,35 @@ You create a nonmagical trinket or an illusory image that can fit in your hand a
 ('Mass Heal', 'A flood of healing energy flows from you into injured creatures around you. You restore up to 700 hit points, divided as you choose among any number of creatures that you can see within range. Creatures healed by this spell are also cured of all diseases and any effect making them blinded or deafened. This spell has no effect on undead or constructs.', '9', 'CLASS:Cleric'),
 ('True Resurrection', 'You touch a creature that has been dead for no longer than 200 years and that died for any reason except old age. If the creature’s soul is free and willing, the creature is restored to life with all its hit points. This spell closes all wounds, neutralizes any poison, cures all diseases, and lifts any curses affecting the creature when it died.', '9', 'CLASS:Cleric'),
 
+('Druidcraft', 'Whispering to the spirits of nature, you create one of the following effects within range:
+	You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round.
+	You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.
+	You create an instantaneous, harmless sensory effect, such as falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk. The effect must fit in a 5-foot cube.
+	You instantly light or snuff out a candle, a torch, or a small campfire.', '0', 'CLASS:Druid'),
+('Guidance', 'You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.', '0', 'CLASS:Druid'),
+('Mending', 'This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.', '0', 'CLASS:Druid'),
+('Poison Spray', 'You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 1d12 poison damage.', '0', 'CLASS:Druid'),
+('Produce Flame', 'A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-­‐‑foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again. You can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 1d8 fire damage.', '0', 'CLASS:Druid'),
+('Resistance', 'You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after making the saving throw. The spell then ends.', '0', 'CLASS:Druid'),
+('Shillelagh', 'The wood of a club or quarterstaff you are holding is imbued with nature’s power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon’s damage die becomes a d8. The weapon also becomes magical, if it isn’t already. The spell ends if you cast it again or if you let go of the weapon.', '0', 'CLASS:Druid'),
+
 ('', '', '', ''),
 
+('', '', '', ''),
 
+('', '', '', ''),
 
+('', '', '', ''),
+
+('', '', '', ''),
+
+('', '', '', ''),
+
+('', '', '', ''),
+
+('', '', '', ''),
+
+('', '', '', ''),
 
 
 
