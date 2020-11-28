@@ -968,7 +968,14 @@ You create a nonmagical trinket or an illusory image that can fit in your hand a
 ('Water Walk', 'The transmuted creatures can tread on any liquid as if it were firm ground. Mud, oil, snow, quicksand, running water, ice, and even lava can be traversed easily, since the subjects’ feet hover an inch or two above the surface. (Creatures crossing molten lava still take damage from the heat because they are near it.) The subjects can walk, run, charge, or otherwise move across the surface as if it were normal ground.', '3', 'CLASS:Ranger'),
 ('Wind Wall', 'A wall of strong wind rises from the ground at a point you choose within range. You can make the wall up to 50 feet long, 15 feet high, and 1 foot thick. You can shape the wall in any way you choose so long as it makes one continuous path along the ground. The wall lasts for the duration. When the wall appears, each creature within its area must make a Strength saving throw. A creature takes 3d8 bludgeoning damage on a failed save, or half as much damage on a successful one.', '3', 'CLASS:Ranger'),
 
-('', '', '', ''),
+('Conjure Woodland Beings', 'You summon fey creatures that appear in unoccupied spaces that you can see within range. Choose one of the following options for what appears:
+	One fey creature of challenge rating 2 or lower
+	Two fey creatures of challenge rating 1 or lower
+	Four fey creatures of challenge rating 1/2 or lower
+	Eight fey creatures of challenge rating 1/4 or lower', '4', 'CLASS:Ranger'),
+('Freedom of Movement', 'You touch a willing creature. For the duration, the target’s movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target’s speed nor cause the target to be paralyzed or restrained. The target can also spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it grappled. Finally, being underwater imposes no penalties on the target’s movement or attacks.', '4', 'CLASS:Ranger'),
+('Locate Creature', 'Describe or name a creature that is familiar to you. You sense the direction to the creature’s location, as long as that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement. The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as being under the effects of a polymorph spell, this spell doesn’t locate the creature.', '4', 'CLASS:Ranger'),
+('Stoneskin', 'This spell turns the flesh of a willing creature you touch as hard as stone. Until the spell ends, the target has resistance to nonmagical bludgeoning, piercing, and slashing damage.', '4', 'CLASS:Ranger'),
 
 ('', '', '', ''),
 
