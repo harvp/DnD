@@ -1,75 +1,91 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CharacterCreate.aspx.cs" Inherits="DnD.CharacterCreate" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="CharacterCreate.aspx.cs" Inherits="DnD.CharacterCreate" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        #Select1 {
-            width: 225px;
-        }
-        #Text1 {
-            width: 215px;
-        }
-        #Select2 {
-            width: 225px;
-        }
-        #Select3 {
-            width: 225px;
-        }
-        #Select4 {
-            width: 225px;
-        }
-        #Select5 {
-            width: 225px;
-        }
-        #Select6 {
-            width: 225px;
-        }
-        #Select7 {
-            width: 225px;
-        }
-        #Select8 {
-            width: 225px;
-        }
-        #nameField {
-            width: 274px;
-        }
-        #raceSelect {
-            width: 282px;
-        }
-        #classSelect {
-            width: 293px;
-        }
-        #alignmentSelect {
-            width: 297px;
-        }
-        #levelSelect {
-            width: 302px;
-        }
-        #subclass {
-            width: 296px;
-        }
-        #feats {
-            width: 304px;
-        }
-        #armor {
-            width: 302px;
-        }
-        #weapons {
-            width: 300px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            Name</div>
-    <p>
-        <input id="nameField" type="text" /> &nbsp; &nbsp; &nbsp; <asp:Button ID="enterName" runat="server" Text="Enter name" OnClick="nameConfirm" />
+    
+
+    <div runat="server">
+
+        <style type="text/css">
+            #Select1 {
+                width: 225px;
+            }
+
+            #Text1 {
+                width: 215px;
+            }
+
+            #Select2 {
+                width: 225px;
+            }
+
+            #Select3 {
+                width: 225px;
+            }
+
+            #Select4 {
+                width: 225px;
+            }
+
+            #Select5 {
+                width: 225px;
+            }
+
+            #Select6 {
+                width: 225px;
+            }
+
+            #Select7 {
+                width: 225px;
+            }
+
+            #Select8 {
+                width: 225px;
+            }
+
+            #nameField {
+                width: 274px;
+            }
+
+            #raceSelect {
+                width: 282px;
+            }
+
+            #classSelect {
+                width: 293px;
+            }
+
+            #alignmentSelect {
+                width: 297px;
+            }
+
+            #levelSelect {
+                width: 302px;
+            }
+
+            #subclass {
+                width: 296px;
+            }
+
+            #feats {
+                width: 304px;
+            }
+
+            #armor {
+                width: 302px;
+            }
+
+            #weapons {
+                width: 300px;
+            }
+        </style>
+
+        <p>
+            <input id="nameField" type="text" />
+            &nbsp; &nbsp; &nbsp;
+            <asp:Button ID="enterName" runat="server" Text="Enter name" OnClick="nameConfirm" />
         </p>
-    </form>
+    </div>
 <p>
         Choose Race</p>
     <p>
@@ -183,5 +199,19 @@
     <select id="weapons" name="D8" runat="server">
         <option></option>
     </select>
-</body>
-</html>
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div />
+</asp:Content>
