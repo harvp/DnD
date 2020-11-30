@@ -27,6 +27,8 @@ namespace DnD
         };
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            
             SqlConnection con = new SqlConnection(builder.ConnectionString);    
             string com = "Select * from Proficiencies";    
             SqlDataAdapter adpt = new SqlDataAdapter(com, con);    
@@ -43,16 +45,34 @@ namespace DnD
         {
             insertCharacter();
         }
-        
+        public void clearConfirmation(object sender, EventArgs e){
+            confirmationField.Text = "";
+        }
+        public void clearCharacter() {
+            nameField.Text = "";
+        }
         public void insertCharacter(){
-            int userNum = 24;
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
+                // string User_name = Request.Cookies["username"].Value;
+                int userNum = 1;
+                int charNum = 26;
+                // connection.Open();
+                // string myQuery = "SELECT userID FROM UserInfo WHERE username ="
+                //     + " '" + User_name + "' ";
+                // using(SqlCommand command = new SqlCommand(myQuery, connection))
+                // {
+                //     object user_id = command.ExecuteScalar();
+                //     if (user_id != null)
+                //         userNum = (int)user_id;
+                // }
+                // connection.Close();
+                
                 string myQuery = "INSERT INTO Character (name, userID, classID, level, raceID, experience, alignment, hitPoints) VALUES (@name, @userID, @classID, @level, @raceID, @experience, @alignment, @hitPoints);";
                     using(SqlCommand command = new SqlCommand(myQuery, connection))
                     {
                         command.Parameters.AddWithValue("@name", nameField.Text);
-                        command.Parameters.AddWithValue("@userID", "1");
+                        command.Parameters.AddWithValue("@userID", userNum);
                         command.Parameters.AddWithValue("@classID", classSelect.SelectedValue);
                         command.Parameters.AddWithValue("@level", lvllSelect.SelectedValue);
                         command.Parameters.AddWithValue("@raceID", raceSelect.SelectedValue);
@@ -71,7 +91,7 @@ namespace DnD
                 myQuery = "INSERT INTO SkillProficiency (charID, skillID, proficient) VALUES (@1, 1003, @3), (@1, 1004, @4), (@1, 1005, @5), (@1, 1006, @6), (@1, 1007, @7), (@1, 1008, @8), (@1, 1009, @9), (@1, 1010, @10), (@1, 1011, @11), (@1, 1012, @12), (@1, 1013, @13), (@1, 1014, @14), (@1, 1015, @15), (@1, 1016, @16), (@1, 1017, @17), (@1, 1018, @18), (@1, 1019, @19), (@1, 1020, @20);";
                     using(SqlCommand command = new SqlCommand(myQuery, connection))
                     {
-                        command.Parameters.AddWithValue("@1",userNum);
+                        command.Parameters.AddWithValue("@1",charNum);
                         command.Parameters.AddWithValue("@3",Convert.ToInt32(abi_athletics.Checked));
                         command.Parameters.AddWithValue("@4", Convert.ToInt32(abi_acrobatics.Checked));
                         command.Parameters.AddWithValue("@5", Convert.ToInt32(abi_slightofhand.Checked));
@@ -103,7 +123,7 @@ namespace DnD
                 myQuery = "INSERT INTO AbilityScores (charID, abilityNum, score) VALUES (@1, 1002, @Str), (@1, 1003, @Dex), (@1, 1004, @Con), (@1, 1005, @Int), (@1, 1006, @Wis), (@1, 1007, @Cha);";
                     using(SqlCommand command = new SqlCommand(myQuery, connection))
                     {
-                        command.Parameters.AddWithValue("@1",userNum);
+                        command.Parameters.AddWithValue("@1",charNum);
                         command.Parameters.AddWithValue("@Str", fStr.Text);
                         command.Parameters.AddWithValue("@Dex", fDex.Text);
                         command.Parameters.AddWithValue("@Con", fCon.Text);
@@ -120,6 +140,8 @@ namespace DnD
                     }
                 connection.Close();
             }
+            confirmationField.Text = "Character Created!";
+            clearCharacter();
         }
         public void updateClassInfo(string classId){
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
