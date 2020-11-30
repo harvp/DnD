@@ -17,6 +17,7 @@
 
     <p style="text-align:center;"> 
     <select id="Select1" multiple="false" runat="server"/>
+    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitDisplay" />
     </p>
  </form>
 

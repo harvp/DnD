@@ -17,6 +17,13 @@ namespace DnD
 {
     public partial class DisplayCharacter : System.Web.UI.Page
     {
+        SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder
+        {
+            DataSource = "hrpsvr.database.windows.net",
+            UserID = "hrpzip",
+            Password = "DBMProject1!",
+            InitialCatalog = "DnD"
+        };
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -44,6 +51,10 @@ namespace DnD
                     Select1.DataBind();
                 }
             }
+        }
+        public void submitDisplay(object sender, EventArgs e)
+        {
+
         }
     }
 }
