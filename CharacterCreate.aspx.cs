@@ -36,7 +36,51 @@ namespace DnD
             DropDownList1.DataBind();    
             DropDownList1.DataTextField = "proficiencyName";    
             DropDownList1.DataValueField = "proficiencyID";    
-            DropDownList1.DataBind();  
+            DropDownList1.DataBind();
+
+            HtmlButton SignIn = new HtmlButton();
+            SignIn.ID = "SigninButton";
+            SignIn.InnerHtml = "Login!";
+            SignIn.ServerClick += new System.EventHandler(this.SignIn_Click);
+            Signin.Controls.Add(SignIn);
+        }
+
+        void SignIn_Click(object sender, EventArgs e)
+        {
+            //int userid = 0;
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = "hrpsvr.database.windows.net";
+            builder.UserID = "hrpzip";
+            builder.Password = "DBMProject1!";
+            builder.InitialCatalog = "DnD";
+
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                string user = TextBoxUsername.Text;
+                string pass = TextBoxPassword.Text;
+                connection.Open();
+
+                string qry = "SELECT * FROM UserInfo WHERE username='" + user + "' AND password='" + pass + "'";
+                SqlCommand cmd = new SqlCommand(qry, connection);
+                using (SqlDataReader sdr = cmd.ExecuteReader())
+                {
+                    if (sdr.Read())
+                    {
+                        Label4.Text = "Login Sucess......!!\n";
+                        HttpCookie CookieName = new HttpCookie("username");
+                        CookieName.Value = user;
+                        Response.SetCookie(CookieName);
+                        string User_name = Request.Cookies["username"].Value;
+                        Label3.Text = "Signed in as " + User_name;
+                    }
+                    else
+                    {
+                        Label4.Text = "UserId& Password Is not correct Try again..!!";
+
+                    }
+                }
+
+            }
         }
 
         public void nameConfirm(object sender, EventArgs e)
@@ -45,14 +89,32 @@ namespace DnD
         }
         
         public void insertCharacter(){
-            int userNum = 24;
+            
+
+
+            int userNum = 0;
+
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                string User_name = Request.Cookies["username"].Value;
+                connection.Open();
+                string myIdQuery = "SELECT userID FROM UserInfo WHERE username ="
+                    + " '" + User_name + "' ";
+                SqlCommand command1 = new SqlCommand(myIdQuery, connection);
+                int i = 0;
+                object user_id = command1.ExecuteScalar();
+                if (user_id != null)
+                    i = (int)user_id;
+                userNum = i;
+            }
+
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
                 string myQuery = "INSERT INTO Character (name, userID, classID, level, raceID, experience, alignment, hitPoints) VALUES (@name, @userID, @classID, @level, @raceID, @experience, @alignment, @hitPoints);";
                     using(SqlCommand command = new SqlCommand(myQuery, connection))
                     {
                         command.Parameters.AddWithValue("@name", nameField.Text);
-                        command.Parameters.AddWithValue("@userID", "1");
+                        command.Parameters.AddWithValue("@userID", userNum);
                         command.Parameters.AddWithValue("@classID", classSelect.SelectedValue);
                         command.Parameters.AddWithValue("@level", lvllSelect.SelectedValue);
                         command.Parameters.AddWithValue("@raceID", raceSelect.SelectedValue);
@@ -68,10 +130,24 @@ namespace DnD
                             Console.WriteLine("Error inserting CHARACTER into Database!");
                     }
                 connection.Close();
-                myQuery = "INSERT INTO SkillProficiency (charID, skillID, proficient) VALUES (@1, 1003, @3), (@1, 1004, @4), (@1, 1005, @5), (@1, 1006, @6), (@1, 1007, @7), (@1, 1008, @8), (@1, 1009, @9), (@1, 1010, @10), (@1, 1011, @11), (@1, 1012, @12), (@1, 1013, @13), (@1, 1014, @14), (@1, 1015, @15), (@1, 1016, @16), (@1, 1017, @17), (@1, 1018, @18), (@1, 1019, @19), (@1, 1020, @20);";
+                int charID = 0;
+                myQuery = "SELECT charID from Character WHERE name = \'" + nameField.Text + "\' AND userID = " + userNum + ";";
+                using (SqlCommand command = new SqlCommand(myQuery, connection))
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        int value = reader.GetOrdinal("charID");
+                        charID = reader.GetInt32(value);
+                    }
+                    connection.Close();
+                }
+
+                    myQuery = "INSERT INTO SkillProficiency (charID, skillID, proficient) VALUES (@1, 1003, @3), (@1, 1004, @4), (@1, 1005, @5), (@1, 1006, @6), (@1, 1007, @7), (@1, 1008, @8), (@1, 1009, @9), (@1, 1010, @10), (@1, 1011, @11), (@1, 1012, @12), (@1, 1013, @13), (@1, 1014, @14), (@1, 1015, @15), (@1, 1016, @16), (@1, 1017, @17), (@1, 1018, @18), (@1, 1019, @19), (@1, 1020, @20);";
                     using(SqlCommand command = new SqlCommand(myQuery, connection))
                     {
-                        command.Parameters.AddWithValue("@1",userNum);
+                        command.Parameters.AddWithValue("@1", charID);
                         command.Parameters.AddWithValue("@3",Convert.ToInt32(abi_athletics.Checked));
                         command.Parameters.AddWithValue("@4", Convert.ToInt32(abi_acrobatics.Checked));
                         command.Parameters.AddWithValue("@5", Convert.ToInt32(abi_slightofhand.Checked));
@@ -103,7 +179,7 @@ namespace DnD
                 myQuery = "INSERT INTO AbilityScores (charID, abilityNum, score) VALUES (@1, 1002, @Str), (@1, 1003, @Dex), (@1, 1004, @Con), (@1, 1005, @Int), (@1, 1006, @Wis), (@1, 1007, @Cha);";
                     using(SqlCommand command = new SqlCommand(myQuery, connection))
                     {
-                        command.Parameters.AddWithValue("@1",userNum);
+                        command.Parameters.AddWithValue("@1", charID);
                         command.Parameters.AddWithValue("@Str", fStr.Text);
                         command.Parameters.AddWithValue("@Dex", fDex.Text);
                         command.Parameters.AddWithValue("@Con", fCon.Text);
