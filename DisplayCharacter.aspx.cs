@@ -79,7 +79,6 @@ namespace DnD
                     temp += reader["player"].ToString();
                 }
                 playerName.InnerText = temp;
-                
             }
 
         }
