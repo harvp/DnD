@@ -195,6 +195,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
     <Content Include="DisplayCharacter.aspx" />
+    <Content Include="OnlineHelp.aspx" />
+    <Content Include="TechnicalDocument.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="LevelUp.aspx" />
     <Content Include="MainPage.aspx" />
@@ -432,6 +434,20 @@
     </Compile>
     <Compile Include="DisplayCharacter.aspx.designer.cs">
       <DependentUpon>DisplayCharacter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineHelp.aspx.cs">
+      <DependentUpon>OnlineHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OnlineHelp.aspx.designer.cs">
+      <DependentUpon>OnlineHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechnicalDocument.aspx.cs">
+      <DependentUpon>TechnicalDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechnicalDocument.aspx.designer.cs">
+      <DependentUpon>TechnicalDocument.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

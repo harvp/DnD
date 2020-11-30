@@ -21,6 +21,10 @@
         a.two:link, b:visited {
             color:saddlebrown;
         }
+        .bottom{
+            position:fixed;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -32,7 +36,6 @@
     <p style="text-align:center;"> </p>
         <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a class="one" href="Register.aspx";>Click here to Login!</a></h4>
         <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a class="two" href="Register.aspx";> Click here to register for an account.</a></h4>
-    
 
  </form>
 

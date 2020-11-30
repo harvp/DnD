@@ -15,7 +15,8 @@
         Welcome to the Dungeons and Dragons Character Creator About Page! <br />
         Here you can find out online help document and our technical document.
            </p>
-    <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a class="two" href="Register.aspx";> Click here to register for an account.</a></h4>
+    <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a class="bottom" href="OnlineHelp.aspx";> Online Help</a></h4>
+        <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a class="bottom" href="TechnicalDocument.aspx";> Technical Document</a></h4>
  
  </form>
 
