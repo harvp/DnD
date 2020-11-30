@@ -164,6 +164,7 @@ C:\Users\fmsek\source\repos\DnD\obj\Debug\DnD.csproj.CopyComplete
 C:\Users\fmsek\source\repos\DnD\obj\Debug\DnD.dll
 C:\Users\fmsek\source\repos\DnD\obj\Debug\DnD.pdb
 C:\Users\fmsek\Source\Repos\DnD\bin\roslyn\csc.exe
+C:\Users\fmsek\Source\Repos\DnD\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\fmsek\Source\Repos\DnD\bin\roslyn\csc.exe.config
 C:\Users\fmsek\Source\Repos\DnD\bin\roslyn\csc.rsp
 C:\Users\fmsek\Source\Repos\DnD\bin\roslyn\csi.exe
@@ -172,7 +173,6 @@ C:\Users\fmsek\Source\Repos\DnD\bin\roslyn\csi.rsp
 C:\Users\fmsek\Source\Repos\DnD\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\fmsek\Source\Repos\DnD\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\fmsek\Source\Repos\DnD\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\fmsek\Source\Repos\DnD\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\fmsek\Source\Repos\DnD\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
 C:\Users\fmsek\Source\Repos\DnD\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\fmsek\Source\Repos\DnD\bin\roslyn\Microsoft.CSharp.Core.targets
