@@ -54,9 +54,9 @@ namespace DnD
                 
             }
         }
-        public void submitDisplay(object sender, EventArgs e)
+        public void SubmitDisplay(object sender, EventArgs e)
         {
-            //int userIDNumber = 1;
+            int userIDNumber = 1;
             string myCharID = Select1.Value.ToString();
             //Display Name
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
@@ -70,10 +70,8 @@ namespace DnD
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-
-                    temp += reader["name"].ToString();
+                   temp += reader["name"].ToString();
                 }
-
                 characterName.InnerText = temp;
             }
 
