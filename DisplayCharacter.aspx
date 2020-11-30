@@ -13,8 +13,12 @@
     <form id="form1" runat="server">
   
     <h2 style="color:saddlebrown;font-family:courier;text-align:center;">Dungeons and Dragons Character Creator</h2>
-    
+    <h3 style="color:saddlebrown;font-family:courier;text-align:center;"> Please select a character to display</h3>
+
+    <p style="text-align:center;"> 
+    <select id="Select1" multiple="false" runat="server"/>
+    </p>
  </form>
 
 </body>
-</html>
+</html> 
