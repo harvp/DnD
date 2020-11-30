@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PlayCharacter.aspx.cs" Inherits="DnD.PlayCharacter" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TechnicalDocument.aspx.cs" Inherits="DnD.TechnicalDocument" %>
 
 <!DOCTYPE html>
 

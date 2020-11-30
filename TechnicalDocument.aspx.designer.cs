@@ -11,9 +11,8 @@ namespace DnD
 {
 
 
-    public partial class MainPage
-    {
-
+    public partial class TechnicalDocument {
+        
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -22,5 +21,5 @@ namespace DnD
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-    }
+}
 }

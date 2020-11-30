@@ -194,10 +194,12 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
+    <Content Include="DisplayCharacter.aspx" />
+    <Content Include="OnlineHelp.aspx" />
+    <Content Include="TechnicalDocument.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="LevelUp.aspx" />
     <Content Include="MainPage.aspx" />
-    <Content Include="PlayCharacter.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -396,13 +398,6 @@
       <DependentUpon>MainPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="PlayCharacter.aspx.cs">
-      <DependentUpon>PlayCharacter.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PlayCharacter.aspx.designer.cs">
-      <DependentUpon>PlayCharacter.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -432,6 +427,27 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayCharacter.aspx.cs">
+      <DependentUpon>DisplayCharacter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayCharacter.aspx.designer.cs">
+      <DependentUpon>DisplayCharacter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineHelp.aspx.cs">
+      <DependentUpon>OnlineHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OnlineHelp.aspx.designer.cs">
+      <DependentUpon>OnlineHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechnicalDocument.aspx.cs">
+      <DependentUpon>TechnicalDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechnicalDocument.aspx.designer.cs">
+      <DependentUpon>TechnicalDocument.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

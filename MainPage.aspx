@@ -21,6 +21,10 @@
         a.two:link, b:visited {
             color:saddlebrown;
         }
+        .bottom{
+            position:fixed;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -29,27 +33,12 @@
 
     <h2 style="color:saddlebrown;font-family:courier;text-align:center;">Dungeons and Dragons Character Creator</h2>
         <h4 style="color:saddlebrown;font-family:courier;text-align:center;"> Welcome! Please choose to login in to a previously created account or register for a new account.</h4>
-    <p style="text-align:center;">
+    <p style="text-align:center;"> </p>
         <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a class="one" href="Register.aspx";>Click here to Login!</a></h4>
         <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a class="two" href="Register.aspx";> Click here to register for an account.</a></h4>
-    </p>
-
-<!--
-<p>Choose a Class</p>
-    <asp:DropDownList id="ClassChoice" name="ClassChoice" runat="server">
-    <asp:ListItem selected="True" Value="none">Nothing</asp:ListItem>
-    <asp:ListItem value ="Barbarian">Barbarian</asp:ListItem>
-    <asp:ListItem value ="Bard">Bard</asp:ListItem>
-    <asp:ListItem value ="Rogue">Rogue</asp:ListItem>
-    <asp:ListItem value ="Ranger">Ranger</asp:ListItem>
-    </asp:DropDownList> 
-<p><asp:PlaceHolder ID="ControlContainer" runat="server" /></p>
-        <br />
-</form>
-<h3>Result:</h3>
-    <asp:PlaceHolder ID="Output" runat="server" />
-    
--->
+        <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a class="bottom" href="About.aspx";> About Page</a></h4>
+        <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a href="/ISPTermProjectFinalReport.docx" target:"_blank"> Final Report </a></h4>
+        <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a href="/ISPTermProjectPresentation.pptx" target:"_blank"> Powerpoint Presentation </a></h4>
  </form>
 
 </body>
