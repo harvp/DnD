@@ -11,6 +11,8 @@ using System.Configuration;
 using System.Text;
 using System.Xml.Linq;
 using System.Data.SqlClient;
+using System.Data;
+
 
 namespace DnD
 {
@@ -25,12 +27,47 @@ namespace DnD
         };
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            SqlConnection con = new SqlConnection(builder.ConnectionString);    
+            string com = "Select * from Proficiencies";    
+            SqlDataAdapter adpt = new SqlDataAdapter(com, con);    
+            DataTable dt = new DataTable();    
+            adpt.Fill(dt);    
+            DropDownList1.DataSource = dt;    
+            DropDownList1.DataBind();    
+            DropDownList1.DataTextField = "proficiencyName";    
+            DropDownList1.DataValueField = "proficiencyID";    
+            DropDownList1.DataBind();  
         }
 
         public void nameConfirm(object sender, EventArgs e)
         {
 
+        }
+        public void inserCharacter(){
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                string myQuery = "INSERT INTOCharacters (name, userID, classID, level, raceID, experience, alignment, hitPoints) VALUES (@name, @userID, @classID, @level, @raceID, @experience, @alignment, @hitPoints)";
+                
+                    using(SqlCommand command = new SqlCommand(myQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@name", enterName);
+                        command.Parameters.AddWithValue("@userID", "");
+                        command.Parameters.AddWithValue("@classID", classSelect);
+                        command.Parameters.AddWithValue("@level", levelSelect);
+                        command.Parameters.AddWithValue("@raceID", raceSelect);
+                        command.Parameters.AddWithValue("@experience", "");
+                        command.Parameters.AddWithValue("@alignment", alignmentSelect);
+                        command.Parameters.AddWithValue("@hitpoints", "abc");
+
+                        connection.Open();
+                        int result = command.ExecuteNonQuery();
+
+                        // Check Error
+                        if(result < 0)
+                            Console.WriteLine("Error inserting data into Database!");
+                    }
+                connection.Close();
+            }
         }
         public void updateClassInfo(string classId){
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
@@ -365,5 +402,6 @@ namespace DnD
             fWis.Text = (int.Parse(Wis.Text) + int.Parse(rWis.Text)).ToString();
             fCha.Text = (int.Parse(Cha.Text) + int.Parse(rCha.Text)).ToString();
         }
+        
     }
 }

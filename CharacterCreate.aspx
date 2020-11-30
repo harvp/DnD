@@ -81,8 +81,8 @@
         }
         
         .img{
-            height : 54px;
-            width : 50px;
+            height : 80px;
+            width : 80px;
         }
         .btn {
             margin: 0;
@@ -97,21 +97,31 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            Name</div>
-    <p>
-        <input id="nameField" type="text" /> &nbsp; &nbsp; &nbsp; <asp:Button ID="enterName" runat="server" Text="Enter name" OnClick="nameConfirm" />
-        </p>
-
-        <asp:Image id="raceImage" runat="server"
-           CssClass="img" 
-           ImageAlign="left"
-           ImageUrl=""/>
-
-           <asp:Image id="classImage" runat="server"
-           CssClass="img" 
-           ImageAlign="left"
-           ImageUrl=""/>
+    <table  style="width:100%">
+        <tr>
+            <th style="width:40%">
+                Name
+                <input id="nameField" type="text" /> <br/>
+                <asp:Button ID="enterName" runat="server" Text="Enter name" OnClick="nameConfirm" />
+            </th>
+            <th style="width:30%">
+                <asp:Image id="raceImage" runat="server"
+                CssClass="img" 
+                ImageAlign="Middle"
+                ImageUrl=""/>
+    
+                <asp:Image id="classImage" runat="server"
+                CssClass="img" 
+                ImageAlign="Middle"
+                ImageUrl=""/>
+            </th>
+            <th style="width:30%">
+                Hit Points:
+                <asp:Label id="experience" text="" runat="server" />
+            </th>
+        </tr>
+    </table>    
+        
 
     <table style="width:100%">
         <tr>
@@ -207,10 +217,10 @@
                 <th>Final Score</th>
                 <td rowspan="7" style="width:50%">
                     <h3>Class Description:</h3>
-                    <asp:Label id="classInfo" text="gibberish3" runat="server"></asp:Label>
+                    <asp:Label id="classInfo" text="" runat="server"></asp:Label>
                     <br />
                     <h3>Race Description:</h3>
-                    <asp:Label id="raceInfo" text="gibberish" runat="server"></asp:Label>
+                    <asp:Label id="raceInfo" text="" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -307,6 +317,86 @@
             </th>
         </tr>
     </table>
+    <table style="width:100%">
+        <tr>
+            <td>
+                Feats:
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align:left">
+                <asp:CheckBox ID="feat_actor" runat="server" GroupName="feat" Text="Actor" /> <br />
+                <asp:CheckBox ID="feat_alert" runat="server" GroupName="feat" Text="Alert" /> <br />
+                <asp:CheckBox ID="feat_athlete" runat="server" GroupName="feat" Text="Athlete" /> <br />
+                <asp:CheckBox ID="feat_bountifulluck" runat="server" GroupName="feat" Text="Bountiful Luck" /> <br />
+                <asp:CheckBox ID="feat_charger" runat="server" GroupName="feat" Text="Charger" /> <br />
+                <asp:CheckBox ID="feat_crossbowexpert" runat="server" GroupName="feat" Text="Crossbow Exper" /> <br />
+
+                <asp:CheckBox ID="feat_defensiveduelist" runat="server" GroupName="feat" Text="Defensive Duelist" /> <br />
+                <asp:CheckBox ID="feat_dragonfear" runat="server" GroupName="feat" Text="Dragon Fear" /> <br />
+                <asp:CheckBox ID="feat_dragonhide" runat="server" GroupName="feat" Text="Dragon Hide" /> <br />
+                <asp:CheckBox ID="feat_drowhighagic" runat="server" GroupName="feat" Text="Drow High Magic" /> <br />
+                <asp:CheckBox ID="feat_dualwielder" runat="server" GroupName="feat" Text="Dual Wielder" /> <br />
+                <asp:CheckBox ID="feat_dungeoundelver" runat="server" GroupName="feat" Text="Dungeon Delver" /> <br />
+
+                <asp:CheckBox ID="feat_durable" runat="server" GroupName="feat" Text="Durable" /> <br />
+                <asp:CheckBox ID="feat_dwarffortitude" runat="server" GroupName="feat" Text="DwarF Fortitude" /> <br />
+                <asp:CheckBox ID="feat_elementaladept" runat="server" GroupName="feat" Text="Elemental Adept" /> <br />
+                <asp:CheckBox ID="feat_elvenaccuracy" runat="server" GroupName="feat" Text="Elven Accuracy" /> <br />
+                <asp:CheckBox ID="feat_fadeaway" runat="server" GroupName="feat" Text="Fade Away" /> <br />
+                <asp:CheckBox ID="feat_feytransportation" runat="server" GroupName="feat" Text="Fey Transportation" /> <br />
+            </th>
+            <th style="text-align:left">
+                <asp:CheckBox ID="feat_flamesofphlegethos" runat="server" GroupName="feat" Text="Flames of Phlegethos" /> <br />
+                <asp:CheckBox ID="feat_grappler" runat="server" GroupName="feat" Text="Grappler" /> <br />
+                <asp:CheckBox ID="feat_greatweaponmaster" runat="server" GroupName="feat" Text="Great Weapon Master" /> <br />
+                <asp:CheckBox ID="feat_healer" runat="server" GroupName="feat" Text="Healer" /> <br />
+                <asp:CheckBox ID="feat_heavilyarmored" runat="server" GroupName="feat" Text="Heavily Armored" /> <br />
+                <asp:CheckBox ID="feat_heavyarmormaster" runat="server" GroupName="feat" Text="Heavy Armor Master" /> <br />
+
+                <asp:CheckBox ID="feat_infernalconstitution" runat="server" GroupName="feat" Text="Infernal Constitution" /> <br />
+                <asp:CheckBox ID="feat_inspiringleader" runat="server" GroupName="feat" Text="Inspiring Leader" /> <br />
+                <asp:CheckBox ID="feat_keenmind" runat="server" GroupName="feat" Text="Keen Mind" /> <br />
+                <asp:CheckBox ID="feat_lightlyarmored" runat="server" GroupName="feat" Text="Lightly Armored" /> <br />
+                <asp:CheckBox ID="feat_linguist" runat="server" GroupName="feat" Text="Linguist" /> <br />
+                <asp:CheckBox ID="feat_lucky" runat="server" GroupName="feat" Text="Lucky" /> <br />
+
+                <asp:CheckBox ID="feat_mageslayer" runat="server" GroupName="feat" Text="Mage Slayer" /> <br />
+                <asp:CheckBox ID="feat_magicinitiate" runat="server" GroupName="feat" Text="Magic Initiate" /> <br />
+                <asp:CheckBox ID="feat_martialadept" runat="server" GroupName="feat" Text="Martial Adept" /> <br />
+                <asp:CheckBox ID="feat_mediumarmormaster" runat="server" GroupName="feat" Text="Medium Armor Master" /> <br />
+                <asp:CheckBox ID="feat_mobile" runat="server" GroupName="feat" Text="Mobile" /> <br />
+                <asp:CheckBox ID="feat_moderatelyarmored" runat="server" GroupName="feat" Text="Moderately Armored" /> <br />
+            </th>
+            <th style="text-align:left">
+                <asp:CheckBox ID="feat_mountedcombatant" runat="server" GroupName="feat" Text="Mounted Combatant" /> <br />
+                <asp:CheckBox ID="feat_observant" runat="server" GroupName="feat" Text="Observant" /> <br />
+                <asp:CheckBox ID="feat_polearmmaster" runat="server" GroupName="feat" Text="Polearm Master" /> <br />
+                <asp:CheckBox ID="feat_resilient" runat="server" GroupName="feat" Text="Resilient" /> <br />
+                <asp:CheckBox ID="feat_ritualcaster" runat="server" GroupName="feat" Text="Ritual Caster" /> <br />
+                <asp:CheckBox ID="feat_savageattacker" runat="server" GroupName="feat" Text="Savage Attacker" /> <br />
+
+                <asp:CheckBox ID="feat_sentinel" runat="server" GroupName="feat" Text="Sentinel" /> <br />
+                <asp:CheckBox ID="feat_sharpshooter" runat="server" GroupName="feat" Text="Sharpshooter" /> <br />
+                <asp:CheckBox ID="feat_shieldmaster" runat="server" GroupName="feat" Text="Shield Master" /> <br />
+                <asp:CheckBox ID="feat_skilled" runat="server" GroupName="feat" Text="Skilled" /> <br />
+                <asp:CheckBox ID="feat_skulker" runat="server" GroupName="feat" Text="Skulker" /> <br />
+                <asp:CheckBox ID="feat_spellsniper" runat="server" GroupName="feat" Text="Spell Sniper" /> <br />
+                
+                <asp:CheckBox ID="feat_tavernbrawler" runat="server" GroupName="feat" Text="Tavern Brawler" /> <br />
+                <asp:CheckBox ID="feat_tough" runat="server" GroupName="feat" Text="Tough" /> <br />
+                <asp:CheckBox ID="feat_warcaster" runat="server" GroupName="feat" Text="War Caster" /> <br />
+                <asp:CheckBox ID="feat_weaponmaster" runat="server" GroupName="feat" Text="Waepon Master" /> <br />
+            </th>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>
+                <asp:DropDownList ID="DropDownList1" runat="server"> </asp:DropDownList>  
+            </th>
+        </tr>
+    </table>
 </form>   
 
     <p>
@@ -314,16 +404,6 @@
     </p>
     <p>
         <select id="subclass" name="D5" runat="server">
-            <option></option>
-        </select></p>
-    <p>
-        Choose skills</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        Choose feats</p>
-    <p>
-        <select id="feats" name="D6" runat="server">
             <option></option>
         </select></p>
     <p>
