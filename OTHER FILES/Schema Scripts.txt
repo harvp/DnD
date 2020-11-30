@@ -325,3 +325,12 @@ create table racialAbilities
     foreign key (raceID) REFERENCES
     races (raceID)
 )
+
+create table ClassSpellsKnown
+(
+	classID int,
+	level int,
+	spellsKnown int,
+	invocationsKnown int,
+	primary key (classID, level)
+)
