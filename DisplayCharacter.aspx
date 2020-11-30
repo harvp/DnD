@@ -18,9 +18,10 @@
     <p style="text-align:center;"> 
     <select id="Select1" multiple="false" runat="server"/>
     <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitDisplay" />
-
-        <p id="characterName" runat="server">Name </p>
-    </p>
+      </p>
+        <h3 style="color:saddlebrown;font-family:courier;">Name: </h3>
+        <p style="color:saddlebrown;font-family:courier;" id="characterName" runat="server"></p>
+  
  </form>
 
 </body>
