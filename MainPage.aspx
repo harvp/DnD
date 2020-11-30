@@ -7,21 +7,19 @@
     <title></title>
     <style>
         body {background-color: khaki;}
-        a:link{
-            color:saddlebrown;
-        }
-        a:visited{
-            color:saddlebrown;
-        }
-        .button
-        {
+        a.one:link, a:visited{
             background-color:darkkhaki;
+            color:saddlebrown;
             border:2px solid black;
             border-radius: 4px;
             text-align:center;
             height:35px;
             width:150px;
             font-size:15px;
+            text-decoration:none;
+        }
+        a.two:link, b:visited {
+            color:saddlebrown;
         }
     </style>
 </head>
@@ -32,8 +30,8 @@
     <h2 style="color:saddlebrown;font-family:courier;text-align:center;">Dungeons and Dragons Character Creator</h2>
         <h4 style="color:saddlebrown;font-family:courier;text-align:center;"> Welcome! Please choose to login in to a previously created account or register for a new account.</h4>
     <p style="text-align:center;">
-        <button class="button", onclick=""> Click here to Login!</button>
-        <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a href=""> Click here to register for an account.</a></h4>
+        <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a class="one" href="Register.aspx";>Click here to Login!</a></h4>
+        <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a class="two" href="Register.aspx";> Click here to register for an account.</a></h4>
     </p>
 
 <!--
