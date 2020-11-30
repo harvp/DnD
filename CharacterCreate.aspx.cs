@@ -41,30 +41,79 @@ namespace DnD
 
         public void nameConfirm(object sender, EventArgs e)
         {
-
+            insertCharacter();
         }
-        public void inserCharacter(){
+        
+        public void insertCharacter(){
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
-                string myQuery = "INSERT INTOCharacters (name, userID, classID, level, raceID, experience, alignment, hitPoints) VALUES (@name, @userID, @classID, @level, @raceID, @experience, @alignment, @hitPoints)";
-                
+                string myQuery = "INSERT INTO Character (name, userID, classID, level, raceID, experience, alignment, hitPoints) VALUES (@name, @userID, @classID, @level, @raceID, @experience, @alignment, @hitPoints);";
                     using(SqlCommand command = new SqlCommand(myQuery, connection))
                     {
-                        command.Parameters.AddWithValue("@name", enterName);
-                        command.Parameters.AddWithValue("@userID", "");
-                        command.Parameters.AddWithValue("@classID", classSelect);
-                        command.Parameters.AddWithValue("@level", levelSelect);
-                        command.Parameters.AddWithValue("@raceID", raceSelect);
-                        command.Parameters.AddWithValue("@experience", "");
-                        command.Parameters.AddWithValue("@alignment", alignmentSelect);
-                        command.Parameters.AddWithValue("@hitpoints", "abc");
+                        command.Parameters.AddWithValue("@name", nameField.Text);
+                        command.Parameters.AddWithValue("@userID", "1");
+                        command.Parameters.AddWithValue("@classID", classSelect.SelectedValue);
+                        command.Parameters.AddWithValue("@level", lvllSelect.SelectedValue);
+                        command.Parameters.AddWithValue("@raceID", raceSelect.SelectedValue);
+                        command.Parameters.AddWithValue("@experience", "1");
+                        command.Parameters.AddWithValue("@alignment", alignSelect.SelectedValue);
+                        command.Parameters.AddWithValue("@hitpoints", hitPoints.Text);
 
                         connection.Open();
                         int result = command.ExecuteNonQuery();
 
                         // Check Error
                         if(result < 0)
-                            Console.WriteLine("Error inserting data into Database!");
+                            Console.WriteLine("Error inserting CHARACTER into Database!");
+                    }
+                connection.Close();
+                myQuery = "INSERT INTO SkillProficiency (charID, skillID, proficient) VALUES (@3), (@4), (@5), (@6), (@7), (@8), (@9), (@10), (@11), (@12), (@13), (@14), (@15), (@16), (@17), (@18), (@19), (@20);";
+                    using(SqlCommand command = new SqlCommand(myQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@3", "1, 1003, "+ Convert.ToInt32(abi_athletics.Checked));
+                        command.Parameters.AddWithValue("@4", "1, 1004, "+ Convert.ToInt32(abi_acrobatics.Checked));
+                        command.Parameters.AddWithValue("@5", "1, 1005, "+ Convert.ToInt32(abi_slightofhand.Checked));
+                        command.Parameters.AddWithValue("@6", "1, 1006, "+ Convert.ToInt32(abi_stelth.Checked));
+                        command.Parameters.AddWithValue("@7", "1, 1007, "+ Convert.ToInt32(abi_arcana.Checked));
+                        command.Parameters.AddWithValue("@8", "1, 1008, "+ Convert.ToInt32(abi_history.Checked));
+                        command.Parameters.AddWithValue("@9", "1, 1009, "+ Convert.ToInt32(abi_investigation.Checked));
+                        command.Parameters.AddWithValue("@10", "1, 1010, "+ Convert.ToInt32(abi_nature.Checked));
+                        command.Parameters.AddWithValue("@11", "1, 1011, "+ Convert.ToInt32(abi_religion.Checked));
+                        command.Parameters.AddWithValue("@12", "1, 1012, "+ Convert.ToInt32(abi_animalhandling.Checked));
+                        command.Parameters.AddWithValue("@13", "1, 1013, "+ Convert.ToInt32(abi_insight.Checked));
+                        command.Parameters.AddWithValue("@14", "1, 1014, "+ Convert.ToInt32(abi_medicine.Checked));
+                        command.Parameters.AddWithValue("@15", "1, 1015, "+ Convert.ToInt32(abi_percption.Checked));
+                        command.Parameters.AddWithValue("@16", "1, 1016, "+ Convert.ToInt32(abi_survival.Checked));
+                        command.Parameters.AddWithValue("@17", "1, 1017, "+ Convert.ToInt32(abi_deception.Checked));
+                        command.Parameters.AddWithValue("@18", "1, 1018, "+ Convert.ToInt32(abi_intimidation.Checked));
+                        command.Parameters.AddWithValue("@19", "1, 1019, "+ Convert.ToInt32(abi_performance.Checked));
+                        command.Parameters.AddWithValue("@20", "1, 1020, "+ Convert.ToInt32(abi_persuasion.Checked));
+
+
+                        connection.Open();
+                        int result = command.ExecuteNonQuery();
+
+                        // Check Error
+                        if(result < 0)
+                            Console.WriteLine("Error inserting ABILITIES into Database!");
+                    }
+                connection.Close();
+                myQuery = "INSERT INTO AbilityScores (charID, abilityNum, score) VALUES (@Str, @Dex, @Con, @Int, @Wis, @Cha)";
+                    using(SqlCommand command = new SqlCommand(myQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@Str", "(1, 1002, "+ fStr.Text +")");
+                        command.Parameters.AddWithValue("@Dex", "(1, 1003, "+ fDex.Text +")");
+                        command.Parameters.AddWithValue("@Con", "(1, 1004, "+ fCon.Text +")");
+                        command.Parameters.AddWithValue("@Int", "(1, 1005, "+ fInt.Text +")");
+                        command.Parameters.AddWithValue("@Wis", "(1, 1006, "+ fWis.Text +")");
+                        command.Parameters.AddWithValue("@Cha", "(1, 1007, "+ fCha.Text +")");
+
+                        connection.Open();
+                        int result = command.ExecuteNonQuery();
+
+                        // Check Error
+                        if(result < 0)
+                            Console.WriteLine("Error inserting ABILITIES into Database!");
                     }
                 connection.Close();
             }
@@ -385,6 +434,7 @@ namespace DnD
                     break;
             }
             updateAbilityFinal();
+            updateHitPoints();
         }   
         public void resetAbilities() {
             Str.Text = "10";
@@ -401,6 +451,13 @@ namespace DnD
             fInt.Text = (int.Parse(Int.Text) + int.Parse(rInt.Text)).ToString();
             fWis.Text = (int.Parse(Wis.Text) + int.Parse(rWis.Text)).ToString();
             fCha.Text = (int.Parse(Cha.Text) + int.Parse(rCha.Text)).ToString();
+        }
+        public void updateHitPoints(object sender, EventArgs e) {
+            updateHitPoints();
+        }
+        public void updateHitPoints(){
+            int lvl = int.Parse(lvllSelect.SelectedValue);
+            hitPoints.Text = (10 + 6*(lvl - 1) + (int.Parse(Con.Text)*lvl)).ToString();
         }
         
     }

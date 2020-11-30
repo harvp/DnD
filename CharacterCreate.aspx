@@ -101,8 +101,8 @@
         <tr>
             <th style="width:40%">
                 Name
-                <input id="nameField" type="text" /> <br/>
-                <asp:Button ID="enterName" runat="server" Text="Enter name" OnClick="nameConfirm" />
+                <asp:TextBox id="nameField" runat="server"/> <br/>
+                <asp:Button ID="enterName" runat="server" Text="Add Character" OnClick="nameConfirm" />
             </th>
             <th style="width:30%">
                 <asp:Image id="raceImage" runat="server"
@@ -117,7 +117,7 @@
             </th>
             <th style="width:30%">
                 Hit Points:
-                <asp:Label id="experience" text="" runat="server" />
+                <asp:Label id="hitPoints" text="20" runat="server" />
             </th>
         </tr>
     </table>    
@@ -169,41 +169,45 @@
         <tr>
             <th>
                 Choose Alignment
-                <select id="alignmentSelect" name="alignmentSelect" runat="server">
-                    <option value ="LG">Lawful Good</option>
-                    <option value ="NG">Neutral Good</option>
-                    <option value ="CG">Chaotic Good</option>
-                    <option value ="LN">Lawful Neutral</option>
-                    <option value ="NN">True Neutral</option>
-                    <option value ="CN">Chaotic Neutral</option>
-                    <option value ="LE">Lawful Evil</option>
-                    <option value ="NE">Neutral Evil</option>
-                    <option value ="CE">Chaotic Evil</option>
-                </select></th>
+                <asp:DropDownList id="alignSelect" name="alignSelect" runat="server" 
+                AutoPostBack="true">
+                    <asp:ListItem value="LG">Lawful Good</asp:ListItem>
+                    <asp:ListItem value="NG">Neutral Good</asp:ListItem>
+                    <asp:ListItem value="CG">Chaotic Good</asp:ListItem>
+                    <asp:ListItem value="LN">Lawful Neutral</asp:ListItem>
+                    <asp:ListItem value="NN">True Neutral</asp:ListItem>
+                    <asp:ListItem value="CN">Chaotic Neutral</asp:ListItem>
+                    <asp:ListItem value="LE">Lawful Evil</asp:ListItem>
+                    <asp:ListItem value="NE">Neutral Evil</asp:ListItem>
+                    <asp:ListItem value="CE">Chaotic Evil</asp:ListItem>
+                </asp:DropDownList>
+            </th>
             <th>
                 Choose Level
-                <select id="levelSelect" name="levelSelect" runat="server">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                </select></th>
+                <asp:DropDownList id="lvllSelect" name="lvllSelect" runat="server" 
+                AutoPostBack="true" OnSelectedIndexChanged="updateHitPoints">
+                    <asp:ListItem value="1">1</asp:ListItem>
+                    <asp:ListItem value="2">2</asp:ListItem>
+                    <asp:ListItem value="3">3</asp:ListItem>
+                    <asp:ListItem value="4">4</asp:ListItem>
+                    <asp:ListItem value="5">5</asp:ListItem>
+                    <asp:ListItem value="6">6</asp:ListItem>
+                    <asp:ListItem value="7">7</asp:ListItem>
+                    <asp:ListItem value="8">8</asp:ListItem>
+                    <asp:ListItem value="9">9</asp:ListItem>
+                    <asp:ListItem value="10">10</asp:ListItem>
+                    <asp:ListItem value="11">11</asp:ListItem>
+                    <asp:ListItem value="12">12</asp:ListItem>
+                    <asp:ListItem value="13">13</asp:ListItem>
+                    <asp:ListItem value="14">14</asp:ListItem>
+                    <asp:ListItem value="15">15</asp:ListItem>
+                    <asp:ListItem value="16">16</asp:ListItem>
+                    <asp:ListItem value="17">17</asp:ListItem>
+                    <asp:ListItem value="18">18</asp:ListItem>
+                    <asp:ListItem value="19">19</asp:ListItem>
+                    <asp:ListItem value="20">20</asp:ListItem>
+                </asp:DropDownList>
+            </th>
         </tr>
     </table>
     
@@ -231,7 +235,7 @@
                     <asp:Button text="+" OnClick="updateAbility" id="strUp" runat="server"></asp:Button>
                 </th>
                 <th><asp:Label id="rStr" text="0" runat="server"></asp:Label></th>
-                <th><asp:Label id="fStr" runat="server"></asp:Label></th>
+                <th><asp:Label id="fStr" text="10" runat="server"></asp:Label></th>
             </tr>
             <tr>
                 <th>Dextarity</th>
@@ -241,7 +245,7 @@
                     <asp:Button text="+" OnClick="updateAbility" id="dexUp" runat="server"></asp:Button>
                 </th>
                 <th><asp:Label id="rDex" text="0" runat="server"></asp:Label></th>
-                <th><asp:Label id="fDex" runat="server"></asp:Label></th>
+                <th><asp:Label id="fDex" text="10" runat="server"></asp:Label></th>
             </tr>
             <tr>
                 <th>Constitution</th>
@@ -251,7 +255,7 @@
                     <asp:Button text="+" OnClick="updateAbility" id="conUp" runat="server"></asp:Button>
                 </th>
                 <th><asp:Label id="rCon" text="0" runat="server"></asp:Label></th>
-                <th><asp:Label id="fCon" runat="server"></asp:Label></th>
+                <th><asp:Label id="fCon" text="10" runat="server"></asp:Label></th>
             <tr>
                 <th>Itelligence</th>
                 <th>
@@ -260,7 +264,7 @@
                     <asp:Button text="+" OnClick="updateAbility" id="intUp" runat="server"></asp:Button>
                 </th>
                 <th><asp:Label id="rInt" text="0" runat="server"></asp:Label></th>
-                <th><asp:Label id="fInt" runat="server"></asp:Label></th>
+                <th><asp:Label id="fInt" text="10" runat="server"></asp:Label></th>
             </tr>
             <tr>
                 <th>Wisdom</th>
@@ -270,7 +274,7 @@
                     <asp:Button text="+" OnClick="updateAbility" id="wisUp" runat="server"></asp:Button>
                 </th>
                 <th><asp:Label id="rWis" text="0" runat="server"></asp:Label></th>
-                <th><asp:Label id="fWis" runat="server"></asp:Label></th>
+                <th><asp:Label id="fWis" text="10" runat="server"></asp:Label></th>
             </tr>
             <tr>
                 <th>Charisma</th>
@@ -280,7 +284,7 @@
                     <asp:Button text="+" OnClick="updateAbility" id="chaUp" runat="server"></asp:Button>
                 </th>
                 <th><asp:Label id="rCha" text="0" runat="server"></asp:Label></th>
-                <th><asp:Label id="fCha" runat="server"></asp:Label></th>
+                <th><asp:Label id="fCha" text="10" runat="server"></asp:Label></th>
             </tr>
         </tr>
     </table>
