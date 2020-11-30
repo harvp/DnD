@@ -52,9 +52,9 @@ namespace DnD
                 }
             }
         }
-        public void submitDisplay(object sender, EventArgs e)
+        public void SubmitDisplay(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

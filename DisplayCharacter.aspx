@@ -15,9 +15,10 @@
     <h2 style="color:saddlebrown;font-family:courier;text-align:center;">Dungeons and Dragons Character Creator</h2>
     <h3 style="color:saddlebrown;font-family:courier;text-align:center;"> Please select a character to display</h3>
 
-    <p style="text-align:center;"> 
+    <p style="text-align:center;color:saddlebrown;font-family:courier;"> 
     <select id="Select1" multiple="false" runat="server"/>
     <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitDisplay" />
+
     </p>
  </form>
 
