@@ -38,7 +38,8 @@ namespace DnD
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
-                    string queryBuild = "SELECT * FROM Character WHERE userID = 1;";
+                    int userIDNumber = 1;
+                    string queryBuild = "SELECT * FROM Character WHERE userID = " + userIDNumber + ";";
                     SqlDataAdapter command = new SqlDataAdapter(queryBuild, connection);
                     connection.Open();
 
@@ -50,10 +51,31 @@ namespace DnD
                     Select1.DataValueField = "charID";
                     Select1.DataBind();
                 }
+                
             }
         }
         public void submitDisplay(object sender, EventArgs e)
         {
+            //int userIDNumber = 1;
+            string myCharID = Select1.Value.ToString();
+            //Display Name
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                string queryBuild = "SELECT name FROM Character WHERE charID = " + myCharID + ";";
+                SqlCommand command = new SqlCommand(queryBuild, connection);
+                command.CommandType = System.Data.CommandType.Text;
+                connection.Open();
+                string temp = "";
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    temp += reader["name"].ToString();
+                }
+
+                characterName.InnerText = temp;
+            }
 
         }
     }
