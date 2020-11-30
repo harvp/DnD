@@ -36,7 +36,9 @@
     <p style="text-align:center;"> </p>
         <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a class="one" href="Register.aspx";>Click here to Login!</a></h4>
         <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a class="two" href="Register.aspx";> Click here to register for an account.</a></h4>
-
+        <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a class="bottom" href="About.aspx";> About Page</a></h4>
+        <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a href="/ISPTermProjectFinalReport.docx" target:"_blank"> Final Report </a></h4>
+        <h4 style="color:saddlebrown;font-family:courier;text-align:center;"><a href="/ISPTermProjectPresentation.pptx" target:"_blank"> Powerpoint Presentation </a></h4>
  </form>
 
 </body>
