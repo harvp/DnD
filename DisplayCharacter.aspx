@@ -16,7 +16,7 @@
     <h3 style="color:saddlebrown;font-family:courier;text-align:center;"> Please select a character to display</h3>
 
     <p style="text-align:center;"> 
-    <select id="Select1" multiple="false" runat="server"/>
+    
     </p>
  </form>
 

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Content",
+    "\\OTHER FILES"
   ],
-  "SelectedNode": "\\Register.aspx.cs",
+  "SelectedNode": "\\DisplayCharacter.aspx",
   "PreviewInSolutionExplorer": false
 }

@@ -1,3 +1,49 @@
+INSERT INTO UserInfo(username, password)
+VALUES('hrpzip', 'DBMProject1!');
+INSERT INTO Character (name, player, classID, subclassID, level, raceID, experience, alignment, hitDie)
+VALUES ('Klee', 'Matthew S.', 10, NULL, 3, 11, 0, LG, 12);
+INSERT INTO AbilityScores(charID, abilityNum, score)
+VALUES (1, 1002, 14),
+(1, 1002, 12),
+(1, 1003, 16),
+(1, 1004, 14),
+(1, 1005, 16),
+(1, 1006, 12);
+INSERT INTO ClassFeaturesKnown (charID, classFeaturesID)
+VALUES
+(1, 6),
+(1, 7);
+NSERT INTO CharacterSpellSlots (charID, classID, cantrip, level1, level2, level3, level4, level5, level6, level7, level8, level9)
+VALUES
+(1, 1006, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+INSERT INTO FeatsKnown (charID, featID)
+VALUES
+(1,5),
+(1,6);
+INSERT INTO SkillProficiency (charID, skillID, proficient )
+VALUES
+(1, 1003, 0),
+(1, 1004, 0),
+(1, 1005, 0),
+(1, 1006, 0),
+(1, 1007, 1),
+(1, 1008, 0),
+(1, 1009, 0),
+(1, 1010, 0),
+(1, 1011, 1),
+(1, 1012, 0),
+(1, 1013, 0),
+(1, 1014, 0),
+(1, 1015, 1),
+(1, 1016, 0),
+(1, 1017, 0),
+(1, 1018, 0),
+(1, 1019, 0),
+(1, 1020, 0);
+INSERT INTO SpellsKnown (charID, spellID)
+VALUES
+(1, 1);
+
 INSERT INTO Ability
 VALUES ('Strength', 'STR'),
 		('Dexterity', 'DEX'),
