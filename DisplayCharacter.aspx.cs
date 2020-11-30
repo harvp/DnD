@@ -31,7 +31,7 @@ namespace DnD
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
-                    string queryBuild = "SELECT * FROM Character WHERE userID = 22;";
+                    string queryBuild = "SELECT * FROM Character WHERE userID = 1;";
                     SqlDataAdapter command = new SqlDataAdapter(queryBuild, connection);
                     connection.Open();
 
@@ -39,8 +39,8 @@ namespace DnD
                     command.Fill(ds, "DeckList");
 
                     Select1.DataSource = ds;
-                    Select1.DataTextField = "characterName";
-                    Select1.DataValueField = "characterId";
+                    Select1.DataTextField = "name";
+                    Select1.DataValueField = "charID";
                     Select1.DataBind();
                 }
             }
