@@ -67,15 +67,17 @@
             border-image: url(images/border.png) repeat round;
             border-image-slice: 19;
         }
-        th, td {
+        th {
             border: 1px solid black;
             border-collapse: collapse;
         }
-        th, td {
+        th {
             padding: 10px;
         }
-        tr {
-            
+        td {
+            padding: 0px;
+            border: 1px hidden;
+            border-collapse: collapse;
         }
         
         .img{
@@ -110,9 +112,7 @@
            CssClass="img" 
            ImageAlign="left"
            ImageUrl=""/>
-    
-    
-    
+
     <table style="width:100%">
         <tr>
             <th>
@@ -276,6 +276,11 @@
     </table>
     <table style="width:100%">
         <tr>
+            <td>
+                Skills:
+            </td>
+        </tr>
+        <tr>
             <th style="text-align:left">
                 <asp:CheckBox ID="abi_athletics" runat="server" GroupName="ability" Text="Athletics" /> <br />
                 <asp:CheckBox ID="abi_acrobatics" runat="server" GroupName="ability" Text="Acrobatics" /> <br />
@@ -303,10 +308,7 @@
         </tr>
     </table>
 </form>   
-    <p>
-        Enter Abilities</p>
-    <p>
-        &nbsp;</p>
+
     <p>
         Choose subclass
     </p>
