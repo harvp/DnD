@@ -15,7 +15,7 @@ using System.Data;
 
 
 namespace DnD
-{
+{ 
     public partial class CharacterCreate : System.Web.UI.Page
     {
         SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder
@@ -27,6 +27,8 @@ namespace DnD
         };
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            
             SqlConnection con = new SqlConnection(builder.ConnectionString);    
             string com = "Select * from Proficiencies";    
             SqlDataAdapter adpt = new SqlDataAdapter(com, con);    
@@ -87,12 +89,18 @@ namespace DnD
         {
             insertCharacter();
         }
-        
+        public void clearConfirmation(object sender, EventArgs e){
+            confirmationField.Text = "";
+        }
+        public void clearCharacter() {
+            nameField.Text = "";
+        }
         public void insertCharacter(){
             
 
 
             int userNum = 0;
+            int charNum = 26;
 
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
@@ -110,6 +118,20 @@ namespace DnD
 
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
+                // string User_name = Request.Cookies["username"].Value;
+
+                
+                // connection.Open();
+                // string myQuery = "SELECT userID FROM UserInfo WHERE username ="
+                //     + " '" + User_name + "' ";
+                // using(SqlCommand command = new SqlCommand(myQuery, connection))
+                // {
+                //     object user_id = command.ExecuteScalar();
+                //     if (user_id != null)
+                //         userNum = (int)user_id;
+                // }
+                // connection.Close();
+                
                 string myQuery = "INSERT INTO Character (name, userID, classID, level, raceID, experience, alignment, hitPoints) VALUES (@name, @userID, @classID, @level, @raceID, @experience, @alignment, @hitPoints);";
                     using(SqlCommand command = new SqlCommand(myQuery, connection))
                     {
@@ -196,6 +218,8 @@ namespace DnD
                     }
                 connection.Close();
             }
+            confirmationField.Text = "Character Created!";
+            clearCharacter();
         }
         public void updateClassInfo(string classId){
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
@@ -540,4 +564,5 @@ namespace DnD
         }
         
     }
+ 
 }

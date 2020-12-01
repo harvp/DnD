@@ -22,6 +22,6 @@
     <td><asp:Label ID="Label6" style="color:red" runat="server"></asp:Label></td>
     <td><asp:Label ID="Label3" runat="server"></asp:Label></td>
 
-    <a href="https://localhost:44391/CharacterCreate">Create Character</a>
+    <a href="CharacterCreate.aspx">Create Character</a>
 
 </asp:Content>

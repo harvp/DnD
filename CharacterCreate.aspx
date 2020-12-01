@@ -6,7 +6,9 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-        
+        body {
+            background-color: rgb(44, 44, 44);
+        }
         #Select1 {
             width: 225px;
         }
@@ -98,7 +100,7 @@
 <body>
     <form id="form1" runat="server">
 
-        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: DarkRed">
+        <div class="navbar navbar-inverse navbar-fixed-top" style="color:saddlebrown;font-family:courier;">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -132,7 +134,11 @@
             <th style="width:40%">
                 Name
                 <asp:TextBox id="nameField" runat="server"/> <br/>
-                <asp:Button ID="enterName" runat="server" Text="Add Character" OnClick="nameConfirm" />
+                <asp:Button ID="enterName" runat="server" Text="Add Character" OnClick="nameConfirm" /> 
+                <a href="DisplayCharacter.aspx">Character Display</a>
+                <br/>
+                <asp:Label id="confirmationField" text="" runat="server" 
+                    style="color:green;" ontextchanged="clearConfirmation"/> 
             </th>
             <th style="width:30%">
                 <asp:Image id="raceImage" runat="server"
@@ -427,6 +433,7 @@
     <table>
         <tr>
             <th>
+                Proficiency </br>
                 <asp:DropDownList ID="DropDownList1" runat="server"> </asp:DropDownList>  
             </th>
         </tr>
