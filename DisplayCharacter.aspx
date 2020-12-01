@@ -21,6 +21,9 @@
       </p>
         <h3 style="color:saddlebrown;font-family:courier;">Name: </h3>
         <p style="color:saddlebrown;font-family:courier;" id="characterName" runat="server"></p>
+        <h3 style="color:saddlebrown;font-family:courier;">Player: </h3>
+        <p style="color:saddlebrown;font-family:courier;" id="playerName" runat="server"></p>
+
   
  </form>
 

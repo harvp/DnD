@@ -73,6 +73,12 @@ namespace DnD
                    temp += reader["name"].ToString();
                 }
                 characterName.InnerText = temp;
+                temp = "";
+                while (reader.Read())
+                {
+                    temp += reader["player"].ToString();
+                }
+                playerName.InnerText = temp;
             }
 
         }

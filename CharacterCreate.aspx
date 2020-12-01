@@ -99,6 +99,36 @@
 </head>
 <body>
     <form id="form1" runat="server">
+
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: DarkRed">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Dungeons and Dragons Character Creator</a>
+                </div>
+                
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/About">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <asp:Label ID="Label1" runat="server" Text="login"></asp:Label>
+            <asp:TextBox ID="TextBoxUsername" placeholder="username" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBoxPassword" placeholder="password" TextMode="Password" runat="server"></asp:TextBox>
+            <asp:PlaceHolder ID="Signin"
+                runat="server"/>
+            <button><a runat="server" href="~/Register">Register</a></button>
+            <td><asp:Label ID="Label4" runat="server"></asp:Label></td>
+            <td><asp:Label ID="Label3" runat="server"></asp:Label></td>
+            <hr />
+
     <table  style="width:100%">
         <tr>
             <th style="width:40%">
@@ -401,6 +431,7 @@
     <table>
         <tr>
             <th>
+                Proficiency </br>
                 <asp:DropDownList ID="DropDownList1" runat="server"> </asp:DropDownList>  
             </th>
         </tr>
