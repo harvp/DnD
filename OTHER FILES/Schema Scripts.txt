@@ -338,7 +338,8 @@ create table ClassSpellsKnown
 
 create table racialAbilitiesKnown
 (
+	idValue int identity(1,1),
 	charID int,
-	racialAbilityID int,
-	primary key (charID, racialAbilityID)
+	abilityName varchar(MAX),
+	primary key (idValue)
 )
