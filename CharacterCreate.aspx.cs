@@ -15,7 +15,7 @@ using System.Data;
 
 
 namespace DnD
-{
+{ 
     public partial class CharacterCreate : System.Web.UI.Page
     {
         SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder
@@ -540,4 +540,5 @@ namespace DnD
         }
         
     }
+ 
 }
