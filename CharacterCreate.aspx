@@ -134,7 +134,9 @@
             <th style="width:40%">
                 Name
                 <asp:TextBox id="nameField" runat="server"/> <br/>
-                <asp:Button ID="enterName" runat="server" Text="Add Character" OnClick="nameConfirm" /> <br/>
+                <asp:Button ID="enterName" runat="server" Text="Add Character" OnClick="nameConfirm" /> 
+                <a href="DisplayCharacter.aspx">Character Display</a>
+                <br/>
                 <asp:Label id="confirmationField" text="" runat="server" 
                     style="color:green;" ontextchanged="clearConfirmation"/> 
             </th>
